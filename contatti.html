@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contatti - PuliMag Group</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="servizi-page">
+
+  <header>
+    <div class="header-left">
+      <img src="logo.jpg" alt="Logo PuliMag Group" class="logo" />
+      <h1>PuliMag Grupp</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="servizi.html">Servizi</a></li>
+        <li><a href="contact.html" class="active">Contatti</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<div class="spacer"></div>
+
+<section class="contact-hero">
+  <div class="overlay">
+    <h1>Contattaci per richiedere i nostri servizi</h1>
+    <button onclick="document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth' });">
+      Invia un Messaggio
+    </button>
+  </div>
+</section>
+
+<div class="spacer"></div>
+
+
+<section class="contact-subtext">
+  <p><strong>Richiedi informazioni o un preventivo senza impegno</strong></p>
+  <p>Scopri tutti i servizi offerti dalla nostra azienda, specializzata in soluzioni complete e personalizzate per pulizia,  e logistica. Siamo impegnati a soddisfare ogni tua esigenza con professionalità ed eccellenza, garantendo risultati che superano le aspettative.</p>
+  <p>Il nostro team esperto ti supporta in ogni fase, assicurando un servizio rapido, efficiente e di alta qualità. Contattaci senza impegno per maggiori dettagli e scopri come possiamo aiutarti a semplificare e migliorare la gestione delle tue necessità di pulizia e logistica.</p>
+</section>
+
+
+  <main class="contact-section">
+    <div class="contact-row modified-layout">
+
+      <!-- FORM -->
+      <div class="contact-form">
+        <h2>Contattaci</h2>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Il tuo nome" required />
+          <input type="email" id="email" placeholder="La tua email" required />
+          <textarea id="message" placeholder="Il tuo messaggio" rows="6" required></textarea>
+          <button type="submit">Invia via WhatsApp</button>
+        </form>
+      </div>
+
+      <!-- INFO + MAPPA -->
+      <div class="info-map">
+        <div class="company-info">
+          <h3>Informazioni Aziendali</h3>
+          <p><strong>Email:</strong> <a href="mailto:Pulimag100@gmail.com">Pulimag100@gmail.com</a></p>
+          <p><strong>Telefono:</strong> <a href="tel:+393381776266">+39 3381776266</a></p>
+          <p><strong>Indirizzo:</strong> Via Arcangelo Corelli 102, 50127 FI, Italia</p>
+        </div>
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2255.987654321!2d11.265432100123456!3d43.77305190098765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a56b7c89d12345%3A0xabcdef1234567890!2sVia%20Arcangelo%20Corelli%20102%2C%2050127%20Firenze%2C%20Italia!5e0!3m2!1sit!2sit!4vXXXXX"
+            width="100%" 
+            height="250" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 PuliMag Group. Tutti i diritti riservati.</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        alert("Per favore compila tutti i campi.");
+        return;
+      }
+
+      const whatsappNumber = "3901234567890";
+      const textMessage =
+        `Ciao, mi chiamo ${name}.\n` +
+        `La mia email è: ${email}.\n` +
+        `Messaggio: ${message}`;
+
+      const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(textMessage)}`;
+      window.open(url, '_blank');
+    });
+  </script>
+
+</body>
+</html>

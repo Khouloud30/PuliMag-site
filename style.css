@@ -1,0 +1,642 @@
+body.home-page {
+
+  background: linear-gradient(to bottom, white, #e0f0ff);
+
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #1e3d59;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* الهيدر */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 80px;
+  background-color: #1e3d59;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.company-name {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #1e3d59;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #f18f01;
+  color: white;
+}
+
+/* قسم Benvenuti مع صور متحركة (background slider) */
+.welcome-slider {
+  position: relative;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  margin: 40px 0;
+  font-size: 4rem;
+  font-weight: bold;
+  user-select: none;
+}
+
+
+.welcome-slider::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  animation: sliderAnimation 16s infinite;
+  z-index: 0;
+  filter: brightness(1) contrast(1); /* اضبط السطوع والتباين باش الصور تكون واضحة */
+  opacity: 1; /* خلي الشفافية كاملة */
+}
+
+.welcome-slider h1 {
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  padding: 20px 60px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: none;
+  display: inline-block;
+  margin-bottom: 5px; /* خلي المسافة صغيرة تحت العنوان */
+}
+
+
+.welcome-message {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 0 15px 0; /* بدون فراغ فوق، مع فراغ صغير تحت */
+  background-color: transparent;
+  padding: 5px 30px;
+  border-radius: 10px;
+  display: inline-block;
+  user-select: none;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+
+}
+.btn-servizi {
+    position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #f18f01;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+
+}
+.btn-servizi:hover {
+  background-color: #d77200;
+}
+/* animation keyframes لتغيير الصور الخلفية */
+@keyframes sliderAnimation {
+  0% { background-image: url('background.jpg'); }
+  25% { background-image: url('pulizia.jpg'); }
+  50% { background-image: url('maag.jpg'); }
+  75% { background-image: url('maaag.jpeg'); }
+  100% { background-image: url('maaagg.jpg'); }
+}
+
+/* فصل قسم Chi siamo والأيقونات تحت Benvenuti */
+.content-bottom {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  flex-wrap: wrap;
+  justify-content: space-between; /* بدل flex-start */
+  align-items: flex-start; /* باش يكونو في نفس السطر */
+}
+
+/* قسم Chi siamo على اليسار */
+.chi-siamo-section {
+  flex: 0 0 350px;
+  max-width: 350px;
+}
+
+.chi-siamo-box {
+  background: none;    /* نشيل الخلفية البيضاء */
+  box-shadow: none;    /* نشيل الإطار والظل */
+  padding: 0;          /* نشيل الحشوة */
+  color: #1e3d59;      /* لون النص أزرق غامق */
+}
+
+.chi-siamo-box h2 {
+  background: none;
+  border: none;
+  color: #1e3d59;      /* نص العنوان أزرق غامق */
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.icons-section {
+  flex: 0 0 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 0;
+  align-items: flex-start;
+}
+.icon-box {
+  background: none;
+  width: 100%;
+  padding: 5px 0; /* خفف البادينغ */
+  box-shadow: none;
+  text-align: left;
+  font-size: 1.1rem; /* أكبر شوي للوضوح */
+  cursor: default;
+  color: #1e3d59;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* زيادة المسافة بين الأيقونة والنص */
+  transition: none;
+}
+
+.icon-box i {
+  font-size: 3rem; /* أكبر شوي */
+  color: #1e3d59;
+  margin-bottom: 0;
+}
+
+
+.icon-box p {
+  font-weight: 300; /* خط رقيق */
+  margin: 0;
+  color: #1e3d59;
+}
+
+.icon-box:hover {
+  transform: none; /* نشيل التحريك */
+  box-shadow: none;
+}
+
+/* الفوتر */
+footer {
+  background-color:#1e3d59;
+  text-align: center;
+  padding: 20px 0;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+  .header-left {
+    margin-bottom: 15px;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .welcome-slider {
+    height: 300px;
+    margin: 20px;
+    font-size: 2.5rem;
+  }
+  .welcome-slider h1 {
+    padding: 15px 30px;
+  }
+  .home-main {
+    margin: 20px;
+  }
+   .content-bottom {
+    flex-direction: column;
+    margin: 0 20px 40px;
+  }
+  .chi-siamo-section,
+  .icons-section {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+  .icon-box {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+}
+
+body.servizi-page {
+  background: linear-gradient(45deg, #fdfbfb, #ebedee);
+  color: #1e3d59;
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* header بنفس تصميم الصفحة home */
+header {
+  background-color: ;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: #f18f01;
+}
+
+
+
+
+
+
+
+.servizi-section {
+background: linear-gradient(135deg, #0077b6 0%, #f0f8ff 60%, #023e8a 100%);
+  padding: 70px 20px;
+  font-family: Arial, sans-serif;
+  min-height: 100vh ; /* نطرح تقريبي للفوتر */
+  padding-bottom: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.servizi-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.servizio-box {
+  flex: 1 1 calc(25% - 20px);
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.servizio-box:hover {
+  transform: translateY(-5px);
+}
+
+.servizio-icon {
+  font-size: 40px;
+  color: #0077b6;
+  margin-bottom: 15px;
+}
+
+.servizio-box h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #222;
+}
+
+.servizio-box p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  text-align: left; /* Allineamento testo a sinistra sotto titolo */
+}
+
+.tick-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+  text-align: left;
+}
+.tick-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.tick-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.servizio-img {
+  width: 60%;
+  max-height: 105px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+@media (max-width: 992px) {
+  .servizio-box { flex: 1 1 45%; }
+}
+
+@media (max-width: 600px) {
+  .servizio-box { flex: 1 1 100%; }
+}
+
+
+/* === خلفية الصفحة بيضاء بدل gradient === */
+.contact-section {
+  background-color: white;
+  padding: 60px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.contact-hero {
+  position: relative;
+  height: 300px; /* تقدر تغيّر حسب الحاجة */
+  background-image: url('contact\ 2.jpeg'); /* غيّر اسم الصورة */
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.contact-hero .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  /* إذا تحب شفافية خفيفة خلف النص تقدر تفك التعليق */
+  /* background: rgba(255, 255, 255, 0.1); */
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 2;
+}
+.contact-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+
+.contact-hero button {
+  background-color: #f18f01;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.contact-hero button:hover {
+  background-color: #d87700;
+}
+/* LAYOUT FLEX */
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* FORM STYLE */
+.contact-form {
+  flex: 1;
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #1e3d59;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.contact-form button {
+  background-color: #f18f01;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #d87700;
+}
+
+/* INFOS AZIENDALI */
+.right-side {
+  flex: 1;
+  min-width: 300px;
+}
+
+.company-info {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #1e3d59;
+}
+
+.company-info h3 {
+  color: #f18f01;
+  margin-bottom: 15px;
+}
+
+.company-info p {
+  margin: 8px 0;
+}
+
+.company-info a {
+  color: #1e3d59;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.company-info a:hover {
+  color: #f18f01;
+  text-decoration: underline;
+}
+
+/* MAPPA */
+.map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVE */
+  
+/* === تنسيق الصف باستخدام Flexbox === */
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 60px; /* يدفع القسم لأسفل */
+  padding-left: 20px; /* مسافة من اليسار */
+}
+
+.right-side {
+  flex: 1;
+  min-width: 300px;
+  padding-left: 40px; /* ابعاد بين اليمين واليسار */
+}
+
+/* === استجابة الشاشة الصغيرة === */
+@media (max-width: 900px) {
+  .contact-row {
+    flex-direction: column;
+  }
+}
+
+
+
+.spacer {
+  height: 50px; /* المساحة البيضاء بين الهيدر والصورة */
+  background: white;
+}
+
+
+.contact-subtext {
+  width: 100%;          /* تاخذ عرض كامل الصفحة */
+  padding: 0 40px;      /* شوية مساحة من الجوانب */
+  box-sizing: border-box;
+  color: #1e3d59;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;   /* تقدر تخليها وسط النص */
+  margin-bottom: 60px;
+}
+
+.contact-subtext p strong {
+  font-size: 2.5rem;    /* حجم أكبر للعنوآن */
+  color: #f18f01;
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;   /* يبقى العنوان وسط الصفحة */
+}
+
+.logo-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.logo-small {
+  width: 80px; /* حجم اللوغو */
+  margin-bottom: 10px; /* مسافة بين اللوغو والكلمة */
+}

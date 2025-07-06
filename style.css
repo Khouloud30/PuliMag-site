@@ -640,3 +640,44 @@ background: linear-gradient(135deg, #0077b6 0%, #f0f8ff 60%, #023e8a 100%);
   width: 80px; /* حجم اللوغو */
   margin-bottom: 10px; /* مسافة بين اللوغو والكلمة */
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .container,
+  .content,
+  section,
+  header,
+  footer {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .navbar {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar .nav-item {
+    display: block;
+    margin: 10px 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .columns {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

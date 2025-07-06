@@ -640,13 +640,13 @@ background: linear-gradient(135deg, #0077b6 0%, #f0f8ff 60%, #023e8a 100%);
   width: 80px; /* حجم اللوغو */
   margin-bottom: 10px; /* مسافة بين اللوغو والكلمة */
 }
-
 @media screen and (max-width: 768px) {
   body {
     font-size: 16px;
     padding: 0 10px;
   }
 
+  /* تمديد الحاويات للعرض الكامل */
   .container,
   .content,
   section,
@@ -657,6 +657,7 @@ background: linear-gradient(135deg, #0077b6 0%, #f0f8ff 60%, #023e8a 100%);
     box-sizing: border-box;
   }
 
+  /* شريط التنقل يصبح عمودي ويتوسط النص */
   .navbar {
     display: block;
     text-align: center;
@@ -667,11 +668,13 @@ background: linear-gradient(135deg, #0077b6 0%, #f0f8ff 60%, #023e8a 100%);
     margin: 10px 0;
   }
 
+  /* الصور تصبح متناسبة مع العرض */
   img {
     max-width: 100%;
     height: auto;
   }
 
+  /* الأعمدة تتحول لصفوف عمودية */
   .columns {
     flex-direction: column;
   }
@@ -679,5 +682,17 @@ background: linear-gradient(135deg, #0077b6 0%, #f0f8ff 60%, #023e8a 100%);
   .column {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  /* تحسينات إضافية */
+  .hero {
+    text-align: center; /* توسيط النص في الهيرو */
+    padding: 20px;
+  }
+
+  .box,
+  .card {
+    width: 90%; /* تقليص العرض شوية لراحة العرض */
+    margin: 0 auto 20px auto; /* توسيطهم أفقياً مع مسافة تحت */
   }
 }

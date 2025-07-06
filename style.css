@@ -651,19 +651,24 @@ nav ul li a:hover {
 
 /* إعداد زر الburger: مخفي في الشاشات الكبيرة */
 .burger {
-  display: none;
+  display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px; /* المسافة بين الخطوط */
   cursor: pointer;
+  background-color: transparent; /* خلفية شفافة */
+  padding: 5px; /* شوية padding باش الخطوط ما تلصقش للحواف */
+  border-radius: 4px;
+  width: 35px; /* عرض البورغر */
+  height: auto;
 }
 
 .burger div {
-  width: 25px;
-  height: 3px;
-  background-color: #ffffff ; /* لون مناسب */
+  width: 100%; /* عرض الخطوط كامل داخل البورغر */
+  height: 4px; /* سماكة الخط */
+  background-color: #ffffff; /* اللون الأبيض */
   border-radius: 2px;
+  transition: background-color 0.3s ease;
 }
-
 
 @media screen and (max-width: 768px) {
   body {

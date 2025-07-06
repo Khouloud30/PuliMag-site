@@ -9,6 +9,7 @@ body.home-page {
   min-height: 100vh;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* يمنع التمرير الأفقي */
 }
 
 /* الهيدر */
@@ -236,23 +237,24 @@ footer {
 @media (max-width: 900px) {
   header {
     flex-direction: column;
-    padding: 15px 20px;
+    padding: 15px 10px;
+    align-items: center;
   }
   .header-left {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   nav ul {
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
   }
   .welcome-slider {
-    height: 300px;
-    margin: 20px;
+   width: 100%;
+    padding: 0 10px;
     font-size: 2.5rem;
+    margin: 20px 0;
   }
   .welcome-slider h1 {
-    padding: 15px 30px;
+    padding: 10px 15px;
   }
   .home-main {
     margin: 20px;
@@ -270,6 +272,12 @@ footer {
     width: 45%;
     margin-bottom: 20px;
   }
+  
+  .btn-servizi {
+    width: 80%;
+    max-width: 300px;
+  }
+
 }
 
 body.servizi-page {

@@ -17,7 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 80px;
+  padding: 10px 20px;
   background-color: #1e3d59;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -29,13 +29,13 @@ header {
 }
 
 .logo {
-  height: 50px;
+  height: 40px;
   width: auto;
 }
 
 .company-name {
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: white;
 }
 
@@ -651,7 +651,7 @@ nav ul li a:hover {
 
 /* إعداد زر الburger: مخفي في الشاشات الكبيرة */
 .burger {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 6px; /* المسافة بين الخطوط */
   cursor: pointer;
@@ -664,7 +664,7 @@ nav ul li a:hover {
 
 .burger div {
   width: 100%; /* عرض الخطوط كامل داخل البورغر */
-  height: 4px; /* سماكة الخط */
+  height: 3px; /* سماكة الخط */
   background-color: #ffffff; /* اللون الأبيض */
   border-radius: 2px;
   transition: background-color 0.3s ease;

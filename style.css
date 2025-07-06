@@ -660,7 +660,7 @@ nav ul li a:hover {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: #1e3d59; /* لون مناسب */
+  background-color: #ffffff ; /* لون مناسب */
   border-radius: 2px;
 }
 

@@ -112,7 +112,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
   const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(textMessage)}`;
 
-  if (confirm("Conferma l'invio del messaggio tramite WhatsApp?")) {
+  if (confirm("Sei sicuro di voler inviare il messaggio via WhatsApp?")) {
     alert("Messaggio pronto! Si aprirà WhatsApp per l'invio.");
     window.open(url, '_blank');
   }

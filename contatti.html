@@ -112,8 +112,10 @@
 
     const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(textMessage)}`;
 
-    if (confirm("Sei sicuro di voler inviare il messaggio via WhatsApp?")) {
-      window.open(url, '_blank');
+  if (confirm("Sei sicuro di voler inviare il messaggio via WhatsApp?")) {
+  alert("Messaggio pronto! Si aprirà WhatsApp per l'invio.");
+  window.open(url, '_blank');
+}
     }
   }); // ✅ هوني سكّرنا addEventListener
 </script>

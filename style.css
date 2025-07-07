@@ -1,7 +1,5 @@
 body.home-page {
-
   background: linear-gradient(to bottom, white, #e0f0ff);
-
   font-family: 'Roboto', Arial, sans-serif;
   color: #1e3d59;
   display: flex;
@@ -25,17 +23,16 @@ header {
 .header-left {
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 
 .logo {
   height: 40px;
-  width: auto;
+  width: 40px;
 }
 
 .company-name {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   color: white;
 }
 
@@ -649,25 +646,21 @@ nav ul li a:hover {
   margin-bottom: 10px; /* مسافة بين اللوغو والكلمة */
 }
 
-/* إعداد زر الburger: مخفي في الشاشات الكبيرة */
+/* BURGER MENU */
 .burger {
-  display: none;
+  display: none; /* نخفيه خارج الميديا */
   flex-direction: column;
-  gap: 4px; /* المسافة بين الخطوط */
+  gap: 5px;
   cursor: pointer;
-  background-color: transparent; /* خلفية شفافة */
-  padding: 5px; /* شوية padding باش الخطوط ما تلصقش للحواف */
-  border-radius: 4px;
-  width: 35px; /* عرض البورغر */
-  height: auto;
+  padding: 10px;
+  z-index: 1000;
 }
 
 .burger div {
-  width: 25px; /* عرض الخطوط كامل داخل البورغر */
-  height: 3px; /* سماكة الخط */
-  background-color: #ffffff; /* اللون الأبيض */
+  width: 25px;
+  height: 3px;
+  background-color: white;
   border-radius: 2px;
-  transition: background-color 0.3s ease;
 }
 
 @media screen and (max-width: 768px) {
@@ -676,7 +669,6 @@ nav ul li a:hover {
     padding: 0 10px;
   }
 
-  /* تمديد الحاويات للعرض الكامل */
   .container,
   .content,
   section,
@@ -687,24 +679,11 @@ nav ul li a:hover {
     box-sizing: border-box;
   }
 
-  /* شريط التنقل يصبح عمودي ويتوسط النص */
-  .navbar {
-    display: block;
-    text-align: center;
-  }
-
-  .navbar .nav-item {
-    display: block;
-    margin: 10px 0;
-  }
-
-  /* الصور تصبح متناسبة مع العرض */
   img {
     max-width: 100%;
     height: auto;
   }
 
-  /* الأعمدة تتحول لصفوف عمودية */
   .columns {
     flex-direction: column;
   }
@@ -714,47 +693,50 @@ nav ul li a:hover {
     margin-bottom: 20px;
   }
 
-  /* تحسينات إضافية */
   .hero {
-    text-align: center; /* توسيط النص في الهيرو */
+    text-align: center;
     padding: 20px;
   }
 
   .box,
   .card {
-    width: 90%; /* تقليص العرض شوية لراحة العرض */
-    margin: 0 auto 20px auto; /* توسيطهم أفقياً مع مسافة تحت */
-  }
-    nav#nav-menu ul {
-    display: none;
-    flex-direction: column;
-    background-color: #fdfdfd;
-    position: absolute;
-    top: 70px; /* تحت الهيدر */
-    right: 20px;
-    width: 200px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    border-radius: 8px;
-    padding: 10px 0;
-    z-index: 1000;
+    width: 90%;
+    margin: 0 auto 20px auto;
   }
 
-  nav#nav-menu ul.show {
+  #nav-menu ul {
+    display: none;
+    flex-direction: column;
+    background-color: #1e3d59;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+  }
+
+  #nav-menu ul.show {
     display: flex;
   }
 
-  nav#nav-menu ul li {
+  #nav-menu ul li {
     margin: 10px 0;
-    text-align: right;
+    text-align: center; /* أو left إذا تحب */
   }
 
-  nav#nav-menu ul li a {
-    color: #1e3d59;
+  #nav-menu ul li a {
+    color: white;
     padding: 10px 20px;
     display: block;
   }
 
   .burger {
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
   }
 }

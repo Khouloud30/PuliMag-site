@@ -35,7 +35,7 @@ header {
 
 .company-name {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 18px;
   color: white;
 }
 
@@ -653,7 +653,7 @@ nav ul li a:hover {
 .burger {
   display: none;
   flex-direction: column;
-  gap: 6px; /* المسافة بين الخطوط */
+  gap: 4px; /* المسافة بين الخطوط */
   cursor: pointer;
   background-color: transparent; /* خلفية شفافة */
   padding: 5px; /* شوية padding باش الخطوط ما تلصقش للحواف */
@@ -663,7 +663,7 @@ nav ul li a:hover {
 }
 
 .burger div {
-  width: 100%; /* عرض الخطوط كامل داخل البورغر */
+  width: 25px; /* عرض الخطوط كامل داخل البورغر */
   height: 3px; /* سماكة الخط */
   background-color: #ffffff; /* اللون الأبيض */
   border-radius: 2px;

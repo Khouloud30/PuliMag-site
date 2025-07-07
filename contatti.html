@@ -62,7 +62,7 @@
         <div class="company-info">
           <h3>Informazioni Aziendali</h3>
           <p><strong>Email:</strong> <a href="mailto:Pulimag100@gmail.com">Pulimag100@gmail.com</a></p>
-          <p><strong>Pec:</strong> <a href="mailto:Pulimag100@gmail.com">Pulimaggroup @pec-amministratore.it</a></p>
+          <p><strong>Pec:</strong> <a href="mailto:Pulimag100@gmail.com">Pulimaggroup@pec-amministratore.it</a></p>
           <p><strong>Telefono:</strong> <a href="tel:+393381776266">+39 3381776266</a></p>
           <p><strong>Indirizzo:</strong> Via Arcangelo Corelli 102, 50127 FI, Italia</p>
         </div>
@@ -85,28 +85,39 @@
     <p>&copy; 2025 PuliMag Group. Tutti i diritti riservati.</p>
   </footer>
 
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      if (!name || !email || !message) {
-        alert("Per favore compila tutti i campi.");
-        return;
-      }
+    if (!emailPattern.test(email)) {
+      alert("Inserisci un indirizzo email valido.");
+      return;
+    }
 
-      const whatsappNumber = "3901234567890";
-      const textMessage =
-        `Ciao, mi chiamo ${name}.\n` +
-        `La mia email è: ${email}.\n` +
-        `Messaggio: ${message}`;
+    const message = document.getElementById('message').value.trim();
 
-      const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(textMessage)}`;
+    if (!name || !email || !message) {
+      alert("Per favore compila tutti i campi.");
+      return;
+    }
+
+    const whatsappNumber = "393381776266";
+    const textMessage =
+      `Ciao, mi chiamo ${name}.\n` +
+      `La mia email è: ${email}.\n` +
+      `Messaggio: ${message}`;
+
+    const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(textMessage)}`;
+
+    if (confirm("Sei sicuro di voler inviare il messaggio via WhatsApp?")) {
       window.open(url, '_blank');
-    });
-  </script>
+    }
+  }); // ✅ هوني سكّرنا addEventListener
+</script>
+
 
 </body>
 </html>

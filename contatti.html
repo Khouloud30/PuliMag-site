@@ -86,38 +86,37 @@
   </footer>
 
 <script>
-  document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
 
-    if (!emailPattern.test(email)) {
-      alert("Inserisci un indirizzo email valido.");
-      return;
-    }
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    const message = document.getElementById('message').value.trim();
+  if (!name || !email || !message) {
+    alert("Per favore compila tutti i campi.");
+    return;
+  }
 
-    if (!name || !email || !message) {
-      alert("Per favore compila tutti i campi.");
-      return;
-    }
+  if (!emailPattern.test(email)) {
+    alert("Inserisci un indirizzo email valido.");
+    return;
+  }
 
-    const whatsappNumber = "393381776266";
-    const textMessage =
-      `Ciao, mi chiamo ${name}.\n` +
-      `La mia email è: ${email}.\n` +
-      `Messaggio: ${message}`;
+  const whatsappNumber = "393381776266";
+  const textMessage = 
+    `Ciao, mi chiamo ${name}.\n` +
+    `La mia email è: ${email}.\n` +
+    `Messaggio: ${message}`;
 
-    const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(textMessage)}`;
+  const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(textMessage)}`;
 
   if (confirm("Conferma l'invio del messaggio tramite WhatsApp?")) {
-  alert("Messaggio pronto! Si aprirà WhatsApp per l'invio.");
-  window.open(url, '_blank');
-}
-    }
-  }); // ✅ هوني سكّرنا addEventListener
+    alert("Messaggio pronto! Si aprirà WhatsApp per l'invio.");
+    window.open(url, '_blank');
+  }
+});
 </script>
 
 

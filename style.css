@@ -352,14 +352,12 @@ nav ul li a:hover {
 .servizi-container {
   max-width: 1200px;
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* عمودين */
+  gap: 30px; /* المسافة بين كل box */
 }
 
 .servizio-box {
-  flex: 1 1 calc(25% - 20px);
   background-color: #f9f9f9;
   border-radius: 12px;
   padding: 20px;
@@ -423,13 +421,16 @@ nav ul li a:hover {
 }
 
 @media (max-width: 992px) {
-  .servizio-box { flex: 1 1 45%; }
+  .servizi-container {
+    grid-template-columns: 1fr 1fr; /* يظل عمودين لكن أصغر */
+  }
 }
 
-@media (max-width: 600px) {
-  .servizio-box { flex: 1 1 100%; }
+@media (max-width: 768px) {
+  .servizi-container {
+    grid-template-columns: 1fr; /* عمود واحد على الموبايل */
+  }
 }
-
 
 /* === خلفية الصفحة بيضاء بدل gradient === */
 .contact-section {
@@ -740,3 +741,4 @@ nav ul li a:hover {
     background-color: white;
   }
 }
+

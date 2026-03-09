@@ -354,6 +354,7 @@ nav ul li a:hover {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* عمودين */
+  grid-template-rows: repeat(2, auto); /* سطرين */
   gap: 30px; /* المسافة بين كل box */
 }
 
@@ -371,7 +372,7 @@ nav ul li a:hover {
 }
 
 .servizio-icon {
-  font-size: 40px;
+  font-size: 50px;
   color: #0077b6;
   margin-bottom: 15px;
 }
@@ -413,16 +414,17 @@ nav ul li a:hover {
 }
 
 .servizio-img {
-  width: 60%;
+  width: 50%;
   max-height: 105px;
   object-fit: cover;
   border-radius: 8px;
   margin-top: 10px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 900px) {
   .servizi-container {
-    grid-template-columns: 1fr 1fr; /* يظل عمودين لكن أصغر */
+    grid-template-columns: 1fr; /* يظل عمودين لكن أصغر */
+    grid-template-rows: auto;
   }
 }
 
@@ -741,4 +743,5 @@ nav ul li a:hover {
     background-color: white;
   }
 }
+
 

@@ -337,7 +337,7 @@ nav ul li a:hover {
   background-color: #f18f01;
 }
 .servizi-section {
-  background: linear-gradient(135deg, #0077b6 0%, #f0f8ff 60%, #023e8a 100%);
+  background: #ffffff;
   padding: 70px 20px 80px;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
@@ -354,30 +354,67 @@ nav ul li a:hover {
   gap: 50px;
   padding: 40px;
 }
-}
-/* ✅ BOX يكبر ويعمر المساحة */
+
 .servizio-box {
-  background-color: #f9f9f9;
-  border-radius: 15px;
-  padding: 40px 25px;
-  text-align: center;
-  transition: 0.3s;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  height: 100%; /* مهم باش يعمر */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.servizio-box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 180px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.servizio-box:hover::before {
+  opacity: 1;
 }
 
 .servizio-box:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
-/* TEXT */
-.servizio-box h3 {
-  margin-bottom: 15px;
-  font-size: 22px;
-  color: #222;
+.servizio-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.servizio-box:hover .servizio-img {
+  transform: scale(1.1);
+}
+
+.servizio-content {
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.servizio-box:hover .servizio-content {
+  transform: translateY(-5px);
+}
+
+.servizio-content h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #111;
+}
+
+.servizio-content p {
+  font-size: 14px;
+  color: #666;
 }
 
 .tick-list {
@@ -402,22 +439,19 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
-/* IMAGE */
-.servizio-img {
-  width: 60%;
-  max-height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 15px auto 0;
-}
-
-/* 📱 RESPONSIVE */
+/* responsive */
 @media (max-width: 900px) {
   .servizi-container {
     grid-template-columns: 1fr;
   }
 }
 
+@media (max-width: 600px) {
+  .servizi-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
 /* === خلفية الصفحة بيضاء بدل gradient === */
 .contact-section {
   background-color: white;

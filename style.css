@@ -345,15 +345,15 @@ nav ul li a:hover {
   justify-content: center;
 }
 
-/* ✅ GRID على كامل الصفحة */
 .servizi-container {
   width: 100%;
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 60px; /* ⬅️ زيدنا المسافة */
-  padding: 40px; /* ⬅️ مهم باش يبعدهم على الحواف */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  padding: 40px;
+}
 }
 /* ✅ BOX يكبر ويعمر المساحة */
 .servizio-box {

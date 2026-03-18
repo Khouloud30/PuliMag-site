@@ -336,84 +336,47 @@ nav ul li a.active,
 nav ul li a:hover {
   background-color: #f18f01;
 }
-
 .servizi-section {
   background: linear-gradient(135deg, #0077b6 0%, #f0f8ff 60%, #023e8a 100%);
-  padding: 70px 20px;
-  padding-bottom: 80px; /* ✅ هنا زدنا المسافة من تحت */
+  padding: 70px 20px 80px;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
 }
 
+/* ✅ GRID على كامل الصفحة */
 .servizi-container {
+  width: 100%;
   max-width: 1400px;
-  margin: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* عمودين */
-  grid-template-rows: repeat(2, auto); /* سطرين */
-  padding: 80px 40px; /* padding من جميع الجهات */
-  gap: 100px; /* المسافة بين كل box */
-  
-.servizi-section {
-  background: linear-gradient(135deg, #0077b6 0%, #f0f8ff 60%, #023e8a 100%);
-  padding: 70px 20px;
-  padding-bottom: 80px; /* ✅ هنا زدنا المسافة من تحت */
-  font-family: Arial, sans-serif;
-  box-sizing: border-box;
+  grid-template-columns: repeat(2, 1fr); /* 2 × 2 */
+  gap: 40px;
+}
+
+/* ✅ BOX يكبر ويعمر المساحة */
+.servizio-box {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 40px 25px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  height: 100%; /* مهم باش يعمر */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
-}
-
-.servizi-container {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* عمودين */
-  grid-template-rows: repeat(2, auto); /* سطرين */
-  gap: 60px; /* المسافة بين كل box */
-}
-
-.servizio-box {
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  padding: 50px 30px ;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  height: 400px; /* ارتفاع أكبر لكل box */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* يرفع المحتوى للوسط */
 }
 
 .servizio-box:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
-.servizio-icon {
-  font-size: 60px;
-  color: #0077b6;
-  margin-bottom: 20px;
-}
-
+/* TEXT */
 .servizio-box h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
+  margin-bottom: 15px;
+  font-size: 22px;
   color: #222;
-}
-
-.servizio-box p {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.6;
-  text-align: left; /* Allineamento testo a sinistra sotto titolo */
 }
 
 .tick-list {
@@ -422,123 +385,35 @@ nav ul li a:hover {
   margin: 0 0 15px;
   text-align: left;
 }
+
 .tick-list li {
   position: relative;
   padding-left: 25px;
   margin-bottom: 10px;
   color: #555;
-  font-size: 15px;
-  line-height: 1.6;
 }
+
 .tick-list li::before {
   content: "✓";
   position: absolute;
   left: 0;
-  top: 0;
   color: #28a745;
   font-weight: bold;
 }
 
+/* IMAGE */
 .servizio-img {
-  width: 50%;
-  max-height: 105px;
+  width: 60%;
+  max-height: 120px;
   object-fit: cover;
   border-radius: 8px;
-  margin-top: 10px;
+  margin: 15px auto 0;
 }
 
+/* 📱 RESPONSIVE */
 @media (max-width: 900px) {
   .servizi-container {
-    grid-template-columns: 1fr; /* يظل عمودين لكن أصغر */
-    grid-template-rows: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .servizi-container {
-    grid-template-columns: 1fr; /* عمود واحد على الموبايل */
-  }
-}
-
-}
-
-.servizio-box {
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  padding: 30px;
-  text-align: center;
-  transition: transform 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  height: 300px; /* ارتفاع أكبر لكل box */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* يرفع المحتوى للوسط */
-}
-
-.servizio-box:hover {
-  transform: translateY(-5px);
-}
-
-.servizio-icon {
-  font-size: 60px;
-  color: #0077b6;
-  margin-bottom: 20px;
-}
-
-.servizio-box h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
-  color: #222;
-}
-
-.servizio-box p {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.6;
-  text-align: left; /* Allineamento testo a sinistra sotto titolo */
-}
-
-.tick-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 15px;
-  text-align: left;
-}
-.tick-list li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 10px;
-  color: #555;
-  font-size: 15px;
-  line-height: 1.6;
-}
-.tick-list li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #28a745;
-  font-weight: bold;
-}
-
-.servizio-img {
-  width: 50%;
-  max-height: 105px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
-@media (max-width: 900px) {
-  .servizi-container {
-    grid-template-columns: 1fr; /* يظل عمودين لكن أصغر */
-    grid-template-rows: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .servizi-container {
-    grid-template-columns: 1fr; /* عمود واحد على الموبايل */
+    grid-template-columns: 1fr;
   }
 }
 

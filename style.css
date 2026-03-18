@@ -348,12 +348,13 @@ nav ul li a:hover {
 /* ✅ GRID على كامل الصفحة */
 .servizi-container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
+  margin: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 × 2 */
-  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px; /* ⬅️ زيدنا المسافة */
+  padding: 40px; /* ⬅️ مهم باش يبعدهم على الحواف */
 }
-
 /* ✅ BOX يكبر ويعمر المساحة */
 .servizio-box {
   background-color: #f9f9f9;

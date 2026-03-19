@@ -387,10 +387,12 @@ nav ul li a:hover {
 }
 
 .servizio-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+  width: 80%;       /* تحكم في العرض: 80% من width متاع card */
+  max-height: 150px; /* أقصى ارتفاع للصورة */
+  object-fit: cover; /* يحافظ على النسبة متاع الصورة */
+  border-radius: 10px; /* optional: حواف مدورة */
   transition: transform 0.5s ease;
+  margin-bottom: 15px; /* مسافة بين الصورة والنص */
 }
 
 .servizio-box:hover .servizio-img {

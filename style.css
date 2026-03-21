@@ -604,7 +604,7 @@ body.contact-page {
 }
 .info-row {
   display: flex;
-  gap: 40px;
+  gap: 60px;
   align-items: stretch;
 }
 
@@ -615,6 +615,8 @@ body.contact-page {
 
 /* INFO (right) */
 .info-text {
+  line-height: 1.8;
+  padding-top: 10px;
   flex: 1;   /* 👈 أصغر */
   background: transparent;  /* 👈 مهم */
   padding: 25px;

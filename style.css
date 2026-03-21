@@ -254,21 +254,26 @@ footer {
 /* Responsive */
 @media (max-width: 480px) {
   header {
-    flex-direction: column;
-    padding: 15px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* 🔥 */
     align-items: center;
   }
+
   .header-left {
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
+
   nav ul {
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    font-size: 0.9rem;
-
-
+    display: none; /* نخبي القائمة */
   }
+
+  .menu-toggle {
+    display: block; /* نوري زر burger */
+    font-size: 1.8rem;
+    color: white;
+  }
+}
   .welcome-slider {
    width: 100%;
     padding: 40px 10px;

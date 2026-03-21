@@ -607,7 +607,7 @@ body.contact-page {
 
 .map {
   flex: 1;   /* 👈 خليه أكبر */
-  padding-left: 30px; /* 👈 يعطي espace داخل الماب */
+  padding-left: 50px; /* 👈 يعطي espace داخل الماب */
   padding-right: 10px;
 
 

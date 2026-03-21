@@ -4,21 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home - PuliMag Group</title>
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    rel="stylesheet"
-  />
-  <link href="style.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>  <link href="style.css" rel="stylesheet" />
 </head>
 <body class="home-page">
-
-  <header>
+<header>
   <div class="header-left">
     <img src="logo.jpg" alt="Logo" class="logo" />
     <div class="company-name">PuliMag Group</div>
   </div>
-
-    
 <nav id="nav-menu">
   <ul>
     <li><a href="index.html" class="active">Home</a></li>
@@ -39,6 +32,8 @@
   <h1>Benvenuti</h1>
   <p class="welcome-message">Il tuo partner per un ambiente pulito e una logistica perfetta</p>
   <button class="btn-servizi" onclick="location.href='servizi.html'">Scopri I Nostri Servizi</button>
+    <!-- زر التقييم -->
+    <button class="btn-servizi avis-btn" style="margin-top:10px;">Lascia un'opinione</button>
 </section>
 
     <section class="content-bottom">
@@ -81,50 +76,8 @@
       </section>
     </section>
   </main>
-  
-<script>
-  const burger = document.querySelector(".burger");
-  const nav = document.querySelector("#nav-menu ul");
-  
-burger.addEventListener("click", () => {
-  nav.classList.toggle("show");
-});
-
-const links = document.querySelectorAll("nav ul li a");
-
-links.forEach(link => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("show"); // 🔥 يسكر menu
-  });
-});
-</script>
-  
-  <script>
-const modal = document.getElementById("reviewModal");
-const btn = document.querySelector(".avis-btn");
-const closeBtn = document.querySelector(".close");
-
-btn.onclick = function() {
-  modal.style.display = "flex";
-}
-
-closeBtn.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(e) {
-  if (e.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-
-  <footer>
-    &copy; 2025 PuliMag Group - Tutti i diritti riservati
-  </footer>
-
-</body>
-  <div id="reviewModal" class="modal">
+  <!-- MODAL REVIEW -->
+<div id="reviewModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
 
@@ -147,4 +100,41 @@ window.onclick = function(e) {
     <button>Invia</button>
   </div>
 </div>
+  
+<script>
+ const burger = document.querySelector(".burger");
+const nav = document.querySelector("#nav-menu ul");
+
+burger.addEventListener("click", () => {
+  nav.classList.toggle("show");
+});
+
+// زر التقييم
+document.addEventListener("DOMContentLoaded", function() {
+
+  const modal = document.getElementById("reviewModal");
+  const btn = document.querySelector(".avis-btn");
+  const closeBtn = document.querySelector(".close");
+
+  btn.onclick = function() {
+    modal.style.display = "flex";
+  }
+
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(e) {
+    if (e.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+});
+</script>
+
+  <footer>
+    &copy; 2025 PuliMag Group - Tutti i diritti riservati
+  </footer>
+</body>
 </html>

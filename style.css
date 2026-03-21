@@ -631,6 +631,22 @@ body.contact-page {
   border-radius: 12px;
 }
 
+.preventivo-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.preventivo-section h2 {
+  color: #f18f01;   /* orange */
+  margin-bottom: 15px;
+}
+
+.preventivo-section .intro-text {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+  color: #1e3d59;
+}
 /* === استجابة الشاشة الصغيرة === */
 @media (max-width: 900px) {
   .contact-row {

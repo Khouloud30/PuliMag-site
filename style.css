@@ -627,11 +627,9 @@ body.contact-page {
 }
 
 .contact-subtext p strong {
-  font-size: 2.5rem;    /* حجم أكبر للعنوآن */
-  color: #f18f01;
   display: block;
-  margin-bottom: 15px;
-  text-align: center;   /* يبقى العنوان وسط الصفحة */
+  text-align: left;
+  margin-left: 40px;
 }
 
 .logo-title {

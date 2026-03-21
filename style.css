@@ -579,8 +579,8 @@ body.contact-page {
 
 .map-container {
   width: 100%;
-  max-width: 400px;   /* 👈 صغّر العرض */
-  height: 130px;      /* 👈 صغّر الطول */
+  max-width: 350px;   /* 👈 صغّر العرض */
+  height: 1500px;      /* 👈 صغّر الطول */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);

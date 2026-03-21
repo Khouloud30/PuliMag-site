@@ -408,8 +408,8 @@ nav ul {
 
 
 body.servizi-page {
-  background: linear-gradient(45deg, #fdfbfb, #ebedee);
-  color: #1e3d59;
+  background: linear-gradient(45deg, #1e3d59, #3a6ea5);
+  color: white;
   font-family: 'Montserrat', Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -546,6 +546,14 @@ nav ul li a:hover {
   color: #666;
 }
 
+footer {
+  background: linear-gradient(45deg, #1e3d59, #3a6ea5);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  margin-top: auto;
+}
 
 /* responsive */
 @media (max-width: 900px) {
@@ -561,6 +569,8 @@ nav ul li a:hover {
   }
 }
 /* === خلفية الصفحة بيضاء بدل gradient === */
+
+
 .contact-section {
   background-color: white;
   padding: 60px 20px;

@@ -31,7 +31,7 @@ header {
 }
 
 .company-name {
-  color: #ffffff !important;
+  color: red !important;
   font-weight: bold;
   font-size: 20px;
 }

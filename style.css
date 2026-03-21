@@ -188,6 +188,7 @@ main {
 }
 
 .chi-siamo-box h2 {
+  margin-bottom: 15px; /* زيدها باش تكبر المسافة */
   background: none;
   border: none;
   color: #1e3d59;      /* نص العنوان أزرق غامق */

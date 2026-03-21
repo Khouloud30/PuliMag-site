@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
 body.home-page {
   background: linear-gradient(to bottom, white, #e0f0ff);
   font-family: 'Roboto', Arial, sans-serif;
@@ -88,7 +94,7 @@ nav ul li a.active {
   animation: sliderAnimation 16s infinite;
   z-index: 0;
   filter: brightness(0.6);
-  opacity: 1; /* خلي الشفافية كاملة */
+  opacity: 0.85; /* خلي الشفافية كاملة */
 
 
 }
@@ -257,11 +263,13 @@ footer {
   }
   nav ul {
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
+    flex-wrap: wrap;
+
   }
   .welcome-slider {
    width: 100%;
-    padding: 0 10px;
+    padding: 40px 10px;
     margin: 20px 0;
   }
   .welcome-slider h1 {

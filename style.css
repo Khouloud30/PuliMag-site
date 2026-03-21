@@ -22,7 +22,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px; 
+  padding: 10px 15px; 
   background-color: #1e3d59;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
@@ -270,6 +270,15 @@ footer {
 
 /* Responsive */
 @media (max-width: 480px) {
+   .company-name {
+    font-size: 16px;
+  }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
+
 
   header {
     display: flex;
@@ -303,8 +312,6 @@ nav ul {
 
   }
 
-
-
   nav ul li {
     margin-bottom: 10px;
   }
@@ -334,10 +341,11 @@ nav ul {
 
   .welcome-slider h1 {
     padding: 10px 15px;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .welcome-message {
+    max-width: 300px;
     font-size: 1rem;
     padding: 5px 10px;
   }
@@ -351,11 +359,15 @@ nav ul {
   .icons-section {
     max-width: 100%;
     flex: 1 1 100%;
+    align-items: center;
+
   }
 
   .icon-box {
     width: 100%;
     margin-bottom: 20px;
+    justify-content: center;
+    text-align: center;
   }
 
   .btn-servizi {

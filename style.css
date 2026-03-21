@@ -524,6 +524,9 @@ body.contact-page {
   border-radius: 16px;
   padding: 30px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+
+  margin-left: 20px;   /* 👈 يدفعه لليسار */
+  text-align: left;    /* 👈 المحتوى لليسار */
 }
 
 .contact-form h2 {

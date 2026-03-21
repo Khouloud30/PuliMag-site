@@ -561,16 +561,15 @@ body.contact-page {
 
 .company-info h3 {
   color: #f18f01;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-size: 1.5rem;
 }
 
 
-.company-info p {
-  display: flex;       /* 👈 باش الإيقونة مع النص */
-  align-items: center;
-  gap: 10px;
-  margin: 8px 0;
+.info-text p {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column; /* يخلي السطر واضح */
 }
 
 .company-info i {

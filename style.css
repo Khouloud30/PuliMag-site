@@ -22,10 +22,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px; 
+  padding: 10px 30px; 
   background-color: #1e3d59;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
+  height: 70px;
 
 }
 
@@ -390,8 +391,7 @@ body.servizi-page {
 }
 
 /* header بنفس تصميم الصفحة home */
-header {
-  background-color: #1e3d59;
+body.servizi-page header {  background-color: #1e3d59;
   color: white;
   padding: 10px 30px;
   display: flex;
@@ -517,7 +517,7 @@ nav ul li a:hover {
 }
 
 /* الفوتر */
-footer {
+body.servizi-page footer {
   background-color:#1e3d59;
   text-align: center;
   padding: 20px 0;

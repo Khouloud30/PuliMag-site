@@ -278,22 +278,23 @@ footer {
     margin-bottom: 0;
   }
 
-  nav ul {
-    transition: all 0.3s ease;
+ nav ul {
     display: none;
     flex-direction: column;
     position: absolute;
     top: 60px;
     right: 0;
     background-color: #1e3d59;
-    width: 200px;
+    width: 220px;
     padding: 20px;
-    z-index: 9999; /* 🔥 مهم */
+    z-index: 9999;
   }
 
   nav ul.show {
     display: flex;
   }
+
+}
 
   nav ul li {
     margin-bottom: 10px;

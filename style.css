@@ -508,22 +508,6 @@ body.contact-page {
   margin-bottom: 15px;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
-
-
-.contact-hero button {
-  background-color: #f18f01;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 8px;
-  color: white;
-  font-size: 1.1rem;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-.contact-hero button:hover {
-  background-color: #d87700;
-}
 /* LAYOUT FLEX */
 .contact-row {
   display: flex;

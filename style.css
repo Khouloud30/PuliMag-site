@@ -15,7 +15,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 30px; 
-  background-color: #1e3d59;
+  background-color: #1e3d59 
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
   height: 70px;
@@ -488,7 +488,7 @@ body{
   margin-top: 0;
   position: relative;
   height: 300px; /* تقدر تغيّر حسب الحاجة */
-  background-image: url("contactus.jpg");
+  background-image: url("contact1.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 0;

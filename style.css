@@ -622,6 +622,7 @@ body.contact-page {
 
 
 .map iframe {
+  margin-left: 10px; /* 👈 يبعد الماب */
   width: 100%;
   height: 250px;
   min-height: 400px;

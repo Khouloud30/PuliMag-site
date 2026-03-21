@@ -485,7 +485,7 @@ body{
 }
 
 body.contact-page {
-  background-image: url("vintage.jpg");
+  background: linear-gradient(to bottom, white, #e0f0ff);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

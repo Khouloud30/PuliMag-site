@@ -628,8 +628,11 @@ body.contact-page {
 
 .contact-subtext p strong {
   display: block;
-  text-align: left;
-  margin-left: 40px;
+  font-size: 3rem;
+  color: #f18f01;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 .logo-title {

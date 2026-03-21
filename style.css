@@ -94,7 +94,7 @@ nav ul li a.active {
   animation: sliderAnimation 16s infinite;
   z-index: 0;
   filter: brightness(0.6);
-  opacity: 0.85; /* خلي الشفافية كاملة */
+  opacity: 0.8; /* خلي الشفافية كاملة */
 
 
 }
@@ -301,8 +301,10 @@ footer {
 
 }
 
-
-
+::selection {
+  background: #f18f01;
+  color: white;
+}
 
 
 

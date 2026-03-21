@@ -475,8 +475,6 @@ body{
 
 
 
-
-
 .contact-section {
   background-color: transparent;
   padding: 60px 20px;
@@ -609,6 +607,10 @@ body.contact-page {
 
 .map {
   flex: 1;   /* 👈 خليه أكبر */
+  padding-left: 30px; /* 👈 يعطي espace داخل الماب */
+  padding-right: 10px;
+
+
 }
 
 .info-text {

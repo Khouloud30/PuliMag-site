@@ -18,12 +18,15 @@ body.home-page {
 
 /* الهيدر */
 header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: #1e3d59;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+
 }
 
 .header-left {
@@ -51,7 +54,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: #1e3d59;
+  color: white;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
@@ -274,7 +277,7 @@ footer {
     background-color: #1e3d59;
     width: 200px;
     padding: 20px;
-    z-index: 999; /* 🔥 مهم */
+    z-index: 9999; /* 🔥 مهم */
   }
 
   nav ul.show {
@@ -294,8 +297,8 @@ footer {
 }
 
   .burger div {
-    width: 25px;
-    height: 3px;
+    width: 30px;
+    height: 4px;
     background: white;
     margin: 5px;
 }
@@ -340,20 +343,13 @@ footer {
   }
 }
 
+.burger {
+  display: none;
+}
 
 ::selection {
   background: #f18f01;
   color: #fff;
-}
-nav ul.show {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background-color: #1e3d59;
-  width: 200px;
-  padding: 20px;
 }
 
 

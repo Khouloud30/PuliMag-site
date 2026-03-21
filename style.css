@@ -74,6 +74,8 @@ nav ul li a.active {
   margin: 0 ;
   padding: 60px 20px;
   user-select: none;
+  gap: 10px;
+
 }
 
 
@@ -95,7 +97,7 @@ nav ul li a.active {
   position: relative;
   z-index: 1;
   background-color: transparent;
-  padding: 20px 60px;
+  padding: 10px 20px;
   border-radius: 12px;
   color: white;
   box-shadow: none;
@@ -260,11 +262,12 @@ footer {
   .welcome-slider {
    width: 100%;
     padding: 0 10px;
-    font-size: 2.5rem;
     margin: 20px 0;
   }
   .welcome-slider h1 {
     padding: 10px 15px;
+    font-size: 2rem;
+
   }
   .home-main {
     margin: 20px;
@@ -279,7 +282,7 @@ footer {
     flex: 1 1 100%;
   }
   .icon-box {
-    width: 45%;
+    width: 100%;
     margin-bottom: 20px;
   }
   

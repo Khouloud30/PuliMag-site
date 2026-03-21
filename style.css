@@ -437,7 +437,7 @@ nav ul li a:hover {
   background-color: #f18f01;
 }
 .servizi-section {
-  background: #ffffff;
+  background: linear-gradient(to bottom, white, #e0f0ff);
   padding: 70px 20px 80px;
   font-family: Arial, sans-serif;
   box-sizing: border-box;

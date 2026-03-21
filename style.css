@@ -633,6 +633,8 @@ body.contact-page {
   font-weight: bold;
   letter-spacing: 1px;
   text-align: center;
+  display: inline-block; /* 👈 يخليها في نفس السطر */
+  white-space: nowrap; 
 }
 
 .logo-title {

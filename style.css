@@ -89,11 +89,7 @@ nav ul li a.active {
   user-select: none;
   gap: 10px;
   background-color: #000; /* fallback */
-
-
 }
-
-
 .welcome-slider::before {
   content: "";
   position: absolute;
@@ -105,9 +101,6 @@ nav ul li a.active {
   filter: brightness(0.6);
   opacity: 1; /* خلي الشفافية كاملة */
   background-repeat: no-repeat;
-
-
-
 }
 
 .welcome-slider h1 {
@@ -122,11 +115,7 @@ nav ul li a.active {
   margin-bottom: 5px; /* خلي المسافة صغيرة تحت العنوان */
   font-size: 3rem;
   font-weight: 700;
-
-
 }
-
-
 .welcome-message {
   position: relative;
   z-index: 1;
@@ -141,9 +130,6 @@ nav ul li a.active {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
   font-weight: 400;
   line-height: 1.6;
-
-
-
 }
 .btn-servizi {
   position: relative;
@@ -162,9 +148,6 @@ nav ul li a.active {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 
 }
-.btn-servizi:hover {
-  background-color: #d77200;
-  }
 .burger {
   position: fixed;
   top: 15px;
@@ -412,7 +395,8 @@ nav ul {
 
 
 body.servizi-page {
-  background: linear-gradient(135deg, #2193b0, #6dd5ed);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
   font-family: 'Montserrat', Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -424,13 +408,13 @@ body.servizi-page {
 
 /* header بنفس تصميم الصفحة home */
 header {
-  background-color: ;
+  background-color: #1e3d59;
   color: white;
   padding: 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-    height: 70px; /* نثبتو الارتفاع */
+  height: 70px; /* نثبتو الارتفاع */
 
 }
 
@@ -550,7 +534,7 @@ nav ul li a:hover {
 }
 
 footer {
-  background: linear-gradient(45deg, #1e3d59, #3a6ea5);
+  background-color: #1e3d59;
   color: white;
   text-align: center;
   padding: 15px 0;

@@ -76,63 +76,8 @@
       </section>
     </section>
   </main>
-  <!-- MODAL REVIEW -->
-<div id="reviewModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-
-    <h2>Lascia la tua opinione</h2>
-
-    <label>Servizio</label>
-    <input type="range" min="1" max="5" value="5">
-
-    <label>Rapidità</label>
-    <input type="range" min="1" max="5" value="5">
-
-    <label>Prezzo</label>
-    <input type="range" min="1" max="5" value="5">
-
-    <label>Accoglienza</label>
-    <input type="range" min="1" max="5" value="5">
-
-    <textarea placeholder="Scrivi la tua recensione..."></textarea>
-
-    <button>Invia</button>
-  </div>
-</div>
   
-<script>
- const burger = document.querySelector(".burger");
-const nav = document.querySelector("#nav-menu ul");
-
-burger.addEventListener("click", () => {
-  nav.classList.toggle("show");
-});
-
-// زر التقييم
-document.addEventListener("DOMContentLoaded", function() {
-
-  const modal = document.getElementById("reviewModal");
-  const btn = document.querySelector(".avis-btn");
-  const closeBtn = document.querySelector(".close");
-
-  btn.onclick = function() {
-    modal.style.display = "flex";
-  }
-
-  closeBtn.onclick = function() {
-    modal.style.display = "none";
-  }
-
-  window.onclick = function(e) {
-    if (e.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-
-});
-</script>
-
+   
   <footer>
     &copy; 2025 PuliMag Group - Tutti i diritti riservati
   </footer>

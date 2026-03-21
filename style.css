@@ -568,6 +568,8 @@ body.contact-page {
   color: #1e3d59;
   text-decoration: none;
   font-weight: 600;
+  margin-left: 20px; /* 👈 حرّكها لليسار */
+
 }
 
 .company-info a:hover {
@@ -577,6 +579,8 @@ body.contact-page {
 
 /* MAPPA */
 .map-container {
+  width: 100%;
+  max-width: 400px; /* 👈 تصغير الماب */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);

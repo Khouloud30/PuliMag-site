@@ -423,16 +423,18 @@ body.servizi-page {
 header {
   background-color: ;
   color: white;
-  padding: 15px 30px;
+  padding: 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+    height: 70px; /* نثبتو الارتفاع */
+
 }
 
 .header-left {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .logo {
@@ -544,27 +546,6 @@ nav ul li a:hover {
   color: #666;
 }
 
-.tick-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 15px;
-  text-align: left;
-}
-
-.tick-list li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 10px;
-  color: #555;
-}
-
-.tick-list li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #28a745;
-  font-weight: bold;
-}
 
 /* responsive */
 @media (max-width: 900px) {

@@ -70,6 +70,7 @@ nav ul li a:hover,
 nav ul li a.active {
   background-color: #f18f01;
   color: white;
+  transition: all 0.3s ease;
 }
 
 /* قسم Benvenuti مع صور متحركة (background slider) */
@@ -170,6 +171,15 @@ nav ul li a.active {
   position: relative;
   z-index: 2000;
 }
+.burger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.active div:nth-child(2) {
+  opacity: 0;
+}
+.burger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
 
 /* animation keyframes لتغيير الصور الخلفية */
 @keyframes sliderAnimation {
@@ -238,7 +248,7 @@ nav ul li a.active {
 }
 
 .icon-box i {
-  font-size: 3rem; /* أكبر شوي */
+  font-size: clamp(2rem, 5vw, 3rem);
   color: #1e3d59;
   margin-bottom: 0;
 }
@@ -377,9 +387,6 @@ nav ul {
     padding: 10px 20px;
   }
 }
-
-
-
 ::selection {
   background: #f18f01;
   color: #fff;

@@ -621,9 +621,9 @@ body.contact-page {
   }
 }
 .contact-subtext {
-  max-width: 700px;
-  margin: 40px 0 40px 80px;
-  text-align: left;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: centre;
   color: #1e3d59;
   font-size: 1.05rem;
   line-height: 1.8;
@@ -631,9 +631,7 @@ body.contact-page {
 
 .contact-subtext p strong {
   display: block;
-  font-size: 3rem;
   color: #f18f01;
-  white-space: nowrap; 
   margin-top: 30px;  /* 👈 زيد أو نقص حسب ما تحب */
 
 }
@@ -648,6 +646,12 @@ body.contact-page {
 .logo-small {
   width: 80px; /* حجم اللوغو */
   margin-bottom: 10px; /* مسافة بين اللوغو والكلمة */
+}
+.map iframe {
+  width: 100%;
+  height: 400px;   /* كبّرها */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 /* BURGER MENU */

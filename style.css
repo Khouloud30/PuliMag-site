@@ -488,7 +488,7 @@ body{
   margin-top: 0;
   position: relative;
   height: 300px; /* تقدر تغيّر حسب الحاجة */
-  background-image: url("contactus.jpg"); /* غيّر اسم الصورة */
+  background-image: url("contactus.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 0;

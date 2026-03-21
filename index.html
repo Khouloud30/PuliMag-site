@@ -82,12 +82,20 @@
   </main>
   
 <script>
-  const burger = document.getElementById('burger-menu');
-  const navMenu = document.querySelector('nav ul');
+  const burger = document.querySelector(".burger");
+const nav = document.querySelector("nav ul");
 
-  burger.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
+burger.addEventListener("click", () => {
+  nav.classList.toggle("show");
+});
+
+const links = document.querySelectorAll("nav ul li a");
+
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("show"); // 🔥 يسكر menu
   });
+});
 </script>
 
   <footer>

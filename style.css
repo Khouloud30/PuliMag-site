@@ -165,11 +165,11 @@ nav ul li a.active {
 .btn-servizi:hover {
   background-color: #d77200;
   }
- .burger {
-  display: none;
-  cursor: pointer;
-  position: relative;
-  z-index: 2000;
+.burger {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 3000;
 }
 .burger.active div:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
@@ -300,19 +300,22 @@ footer {
 nav ul {
   position: fixed;
   top: 60px;
-  right: 0;
-  width: 100%;
-  
-  display: flex;
-  flex-direction: row; /* ✔️ نفس السطر */
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  backdrop-filter: blur(10px);
+  right: 15px;
+  width: 200px;  /* صغيرة */
   background: #ffffff; /* أبيض */
+  border-radius: 10px;
   padding: 15px;
-  transform: translateY(100%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  transform: translateX(120%);
   transition: transform 0.3s ease;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 2500;
+}
 
   nav ul.show {
     transform: translateX(0);

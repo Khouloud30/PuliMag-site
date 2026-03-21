@@ -308,10 +308,10 @@ nav ul {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  background: rgba(30, 61, 89, 0.9); /* شوية أوضح */
   backdrop-filter: blur(10px);
+  background: #ffffff; /* أبيض */
   padding: 15px;
-  transform: translateY(-100%);
+  transform: translateY(100%);
   transition: transform 0.3s ease;
 
   nav ul.show {

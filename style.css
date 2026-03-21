@@ -196,48 +196,6 @@ nav ul li a.active {
   height: 3px;
   margin: 10px auto 0;
 }
-/* Modal background */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999; /* 🔥 مهم */
-
-}
-
-/* Content */
-.modal-content {
-  background: white;
-  padding: 25px;
-  width: 320px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-
-}
-
-.modal-content input,
-.modal-content textarea {
-  width: 100%;
-  margin: 10px 0;
-}
-
-.close {
-  float: right;
-  cursor: pointer;
-  font-size: 22px;
-  font-weight: bold;
-  color: #1e3d59;
-}
-.close:hover {
-  color: #f18f01;
-}
 /* animation keyframes لتغيير الصور الخلفية */
 @keyframes sliderAnimation {
   0% { background-image: url('background.jpg'); }
@@ -262,8 +220,8 @@ nav ul li a.active {
 
 /* قسم Chi siamo على اليسار */
 .chi-siamo-section {
-  flex: 0 0 350px;
-  max-width: 350px;
+  flex: 0 0 400px;
+  max-width: 400px;
 }
 
 .chi-siamo-box {

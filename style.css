@@ -252,7 +252,7 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 480px) {
   header {
     flex-direction: column;
     padding: 15px 10px;
@@ -263,8 +263,10 @@ footer {
   }
   nav ul {
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     flex-wrap: wrap;
+    font-size: 0.9rem;
+
 
   }
   .welcome-slider {
@@ -274,9 +276,13 @@ footer {
   }
   .welcome-slider h1 {
     padding: 10px 15px;
-    font-size: 2rem;
+    font-size: 1.8rem;
 
   }
+  .welcome-message {
+  font-size: 1rem;
+  padding: 5px 10px;
+}
   .home-main {
     margin: 20px;
   }
@@ -297,6 +303,9 @@ footer {
   .btn-servizi {
     width: 80%;
     max-width: 300px;
+    font-size: 1rem;
+    padding: 10px 20px;
+
   }
 
 }

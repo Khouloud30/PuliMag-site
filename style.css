@@ -478,7 +478,7 @@ body{
 
 
 .contact-section {
-  background-color: transaprent;
+  background-color: transparent;
   padding: 60px 20px;
   min-height: 100vh;
   box-sizing: border-box;
@@ -526,7 +526,7 @@ body.contact-page {
   border-radius: 16px;
   padding: 30px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-  margin-left: 20px;   /* 👈 يدفعه لليسار */
+  margin-left: -20px;   /* 👈 يدفعه لليسار */
   text-align: left;    /* 👈 المحتوى لليسار */
 }
 
@@ -554,10 +554,9 @@ body.contact-page {
 }
 
 .company-info {
-  font-size: 1rem;
-  margin-bottom: 20px;
-  color: #1e3d59;
-  margin-left: 20px;   /* 👈 حرّك البلوك لليسار */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 👈 هذا المهم */
   text-align: left;
 }
 
@@ -573,6 +572,11 @@ body.contact-page {
   align-items: center;
   gap: 10px;
   margin: 8px 0;
+}
+
+.company-info i {
+  font-size: 22px;   /* تكبير الإيكون */
+  color: #f18f01;
 }
 
 .company-info a {

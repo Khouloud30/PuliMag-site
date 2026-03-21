@@ -478,7 +478,7 @@ body{
 
 
 .contact-section {
-  background-color: trasaprent;
+  background-color: transaprent;
   padding: 60px 20px;
   min-height: 100vh;
   box-sizing: border-box;
@@ -511,6 +511,8 @@ body.contact-page {
 /* LAYOUT FLEX */
 .contact-row {
   display: flex;
+  justify-content: flex-start; /* 👈 مهم */
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 40px;
   max-width: 1200px;
@@ -524,7 +526,6 @@ body.contact-page {
   border-radius: 16px;
   padding: 30px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-
   margin-left: 20px;   /* 👈 يدفعه لليسار */
   text-align: left;    /* 👈 المحتوى لليسار */
 }
@@ -599,14 +600,6 @@ body.contact-page {
 }
 /* RESPONSIVE */
   
-/* === تنسيق الصف باستخدام Flexbox === */
-.contact-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
 .left-side {
   flex: 1;
@@ -642,10 +635,6 @@ body.contact-page {
   display: block;
   font-size: 3rem;
   color: #f18f01;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-align: center;
-  display: inline-block; /* 👈 يخليها في نفس السطر */
   white-space: nowrap; 
   margin-top: 30px;  /* 👈 زيد أو نقص حسب ما تحب */
 

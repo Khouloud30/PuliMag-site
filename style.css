@@ -46,12 +46,15 @@ header {
 }
 
 nav ul {
+  position: static;
   list-style: none;
   display: flex;
   gap: 40px;
   margin: 0;
-  padding: 0;
+  padding: 0;  
+  z-index: 1500;
 }
+
 
 nav ul li a {
   color: white;
@@ -156,7 +159,14 @@ nav ul li a.active {
 }
 .btn-servizi:hover {
   background-color: #d77200;
+  }
+ .burger {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  z-index: 2000;
 }
+
 /* animation keyframes لتغيير الصور الخلفية */
 @keyframes sliderAnimation {
   0% { background-image: url('background.jpg'); }
@@ -269,6 +279,7 @@ footer {
   }
 
   nav ul {
+    transition: all 0.3s ease;
     display: none;
     flex-direction: column;
     position: absolute;
@@ -290,6 +301,8 @@ footer {
 
   nav ul li a {
     color: white;
+    display: block;
+
   }
   .burger {
     display: block;
@@ -343,9 +356,7 @@ footer {
   }
 }
 
-.burger {
-  display: none;
-}
+
 
 ::selection {
   background: #f18f01;

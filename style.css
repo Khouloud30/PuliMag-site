@@ -180,7 +180,23 @@ nav ul li a.active {
 .burger.active div:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+.why-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #1e3d59;
+  position: relative;
+}
 
+.why-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #f18f01;
+  margin: 10px auto 0;
+}
 /* animation keyframes لتغيير الصور الخلفية */
 @keyframes sliderAnimation {
   0% { background-image: url('background.jpg'); }

@@ -511,12 +511,10 @@ body.contact-page {
 /* LAYOUT FLEX */
 .contact-row {
   display: flex;
-  justify-content: flex-start; /* 👈 مهم */
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 /* FORM STYLE */
@@ -526,8 +524,8 @@ body.contact-page {
   border-radius: 16px;
   padding: 30px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-  margin-left: -20px;   /* 👈 يدفعه لليسار */
-  text-align: left;    /* 👈 المحتوى لليسار */
+  margin: 0;        /* 👈 مهم */
+  text-align: left;
 }
 
 .contact-form h2 {
@@ -551,6 +549,7 @@ body.contact-page {
 .right-side {
   flex: 1;
   min-width: 300px;
+  padding: 0;
 }
 
 .company-info {
@@ -583,7 +582,7 @@ body.contact-page {
   color: #1e3d59;
   text-decoration: none;
   font-weight: 600;
-  margin-left: 20px; /* 👈 حرّكها لليسار */
+  margin-left: 0px; /* 👈 حرّكها لليسار */
   font-size: 1.1rem;
 
 
@@ -614,11 +613,6 @@ body.contact-page {
   padding-left: 20px; /* مسافة من اليسار */
 }
 
-.right-side {
-  flex: 1;
-  min-width: 300px;
-  padding-left: 40px; /* ابعاد بين اليمين واليسار */
-}
 
 /* === استجابة الشاشة الصغيرة === */
 @media (max-width: 900px) {

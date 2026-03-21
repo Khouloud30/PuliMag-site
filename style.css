@@ -131,23 +131,7 @@ nav ul li a.active {
   font-weight: 400;
   line-height: 1.6;
 }
-.btn-servizi {
-  position: relative;
-  z-index: 1;
-  margin: 0 auto;
-  padding: 12px 30px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  background-color: #f18f01;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: inline-block;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 
-}
 .burger {
   position: fixed;
   top: 15px;
@@ -532,15 +516,18 @@ nav ul li a:hover {
   color: #666;
 }
 
+/* الفوتر */
 footer {
-  background-color: #1e3d59;
-  color: white;
+  background-color:#1e3d59;
   text-align: center;
-  padding: 15px 0;
-  font-size: 14px;
+  padding: 20px 0;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
   margin-top: auto;
-}
+  border-top: 1px solid rgba(255,255,255,0.2);
 
+}
 /* responsive */
 @media (max-width: 900px) {
   .servizi-container {
@@ -554,7 +541,10 @@ footer {
     gap: 30px;
   }
 }
-/* === خلفية الصفحة بيضاء بدل gradient === */
+
+
+
+
 
 
 .contact-section {

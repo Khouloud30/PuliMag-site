@@ -184,7 +184,7 @@ nav ul li a.active {
   text-align: center;
   font-size: 30px;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #1e3d59;
   position: relative;
 }
@@ -285,7 +285,7 @@ nav ul li a.active {
   flex: 0 0 350px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 15px;
   margin-top: 0;
   align-items: flex-start;
 }

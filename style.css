@@ -31,9 +31,9 @@ header {
 }
 
 .company-name {
+  color: #ffffff !important;
   font-weight: bold;
   font-size: 20px;
-  color: white;
 }
 /* NAV */
 nav ul {
@@ -365,12 +365,6 @@ nav ul {
   color: #fff;
 }
 
-
-
-
-
-
-
 body{
   background: #ffffff;
   font-family: 'Roboto', Arial, sans-serif;
@@ -380,35 +374,6 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo {
-  width: 60px;
-  height: auto;
-}
-
-
-
-nav ul li a {
-  color: white;
-  font-weight: bold;
-  padding: 8px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-nav ul li a.active,
-nav ul li a:hover {
-  background-color: #f18f01;
 }
 .servizi-section {
   background: linear-gradient(to bottom, white, #e0f0ff);

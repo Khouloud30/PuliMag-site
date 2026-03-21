@@ -415,13 +415,7 @@ body.servizi-page header {  background-color: #1e3d59;
   height: auto;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-}
+
 
 nav ul li a {
   color: white;
@@ -519,18 +513,6 @@ nav ul li a:hover {
   color: #666;
 }
 
-/* الفوتر */
-body.servizi-page footer {
-  background-color:#1e3d59;
-  text-align: center;
-  padding: 20px 0;
-  color: white;
-  font-weight: 600;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-  margin-top: auto;
-  border-top: 1px solid rgba(255,255,255,0.2);
-
-}
 /* responsive */
 @media (max-width: 900px) {
   .servizi-container {

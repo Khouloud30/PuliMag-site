@@ -553,14 +553,21 @@ body.contact-page {
   font-size: 1rem;
   margin-bottom: 20px;
   color: #1e3d59;
+  margin-left: 20px;   /* 👈 حرّك البلوك لليسار */
+  text-align: left;
 }
 
 .company-info h3 {
   color: #f18f01;
   margin-bottom: 15px;
+  font-size: 1.5rem;
 }
 
+
 .company-info p {
+  display: flex;       /* 👈 باش الإيقونة مع النص */
+  align-items: center;
+  gap: 10px;
   margin: 8px 0;
 }
 
@@ -569,6 +576,8 @@ body.contact-page {
   text-decoration: none;
   font-weight: 600;
   margin-left: 20px; /* 👈 حرّكها لليسار */
+  font-size: 1.1rem;
+
 
 }
 
@@ -635,6 +644,8 @@ body.contact-page {
   text-align: center;
   display: inline-block; /* 👈 يخليها في نفس السطر */
   white-space: nowrap; 
+  margin-top: 30px;  /* 👈 زيد أو نقص حسب ما تحب */
+
 }
 
 .logo-title {

@@ -1,20 +1,12 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 html {
   scroll-behavior: smooth;
 }
-body.home-page {
-  background: linear-gradient(to bottom, white, #e0f0ff);
-  font-family: 'Roboto', Arial, sans-serif;
-  color: #1e3d59;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* يمنع التمرير الأفقي */
-}
+
 
 /* الهيدر */
 header {
@@ -27,14 +19,12 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1000;
   height: 70px;
-
 }
-
 .header-left {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
-
 .logo {
   height: 40px;
   width: 40px;
@@ -45,18 +35,12 @@ header {
   font-size: 20px;
   color: white;
 }
-
+/* NAV */
 nav ul {
-  position: static;
   list-style: none;
   display: flex;
   gap: 40px;
-  margin: 0;
-  padding: 0;  
-  z-index: 1500;
 }
-
-
 nav ul li a {
   color: white;
   text-decoration: none;
@@ -73,6 +57,10 @@ nav ul li a.active {
   color: white;
   transition: all 0.3s ease;
 }
+main {
+  flex: 1; /* هذا أهم حاجة باش footer يهبط لتحت */
+}
+
 
 /* قسم Benvenuti مع صور متحركة (background slider) */
 .welcome-slider {
@@ -382,9 +370,9 @@ nav ul {
 
 
 
-body.servizi-page {
+body{
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -393,16 +381,7 @@ body.servizi-page {
   min-height: 100vh;
 }
 
-/* header بنفس تصميم الصفحة home */
-body.servizi-page header {  background-color: #1e3d59;
-  color: white;
-  padding: 10px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px; /* نثبتو الارتفاع */
 
-}
 
 .header-left {
   display: flex;

@@ -485,18 +485,20 @@ body{
 }
 
 .contact-hero {
+  margin-top: 0;
   position: relative;
   height: 300px; /* تقدر تغيّر حسب الحاجة */
-  background-image: url('contact\ 2.jpeg'); /* غيّر اسم الصورة */
+  background-image: url("conatact contactus.jpg")/* غيّر اسم الصورة */
   background-size: cover;
   background-position: center;
-  border-radius: 20px 20px 0 0;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
   font-weight: bold;
+  
 }
 .contact-hero .overlay {
   position: absolute;
@@ -653,11 +655,6 @@ body{
 }
 
 
-
-.spacer {
-  height: 50px; /* المساحة البيضاء بين الهيدر والصورة */
-  background: white;
-}
 
 
 .contact-subtext {

@@ -613,13 +613,12 @@ body.contact-page {
 }
 
 .info-text {
+  flex: 1;
   line-height: 1.8;
-  padding-top: 10px;
-  flex: 1;   /* 👈 أصغر */
-  background: transparent;  /* 👈 مهم */
-  padding: 25px;
-  border-radius: 12px;
+  padding: 0;              /* 👈 نحيو كل padding */
+  background: transparent; /* 👈 بدون خلفية */
   box-shadow: none;
+  border-radius: 0;        /* 👈 ما يلزمش */
 }
 
 

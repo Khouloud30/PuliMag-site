@@ -253,10 +253,11 @@ footer {
 
 /* Responsive */
 @media (max-width: 480px) {
+
   header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* 🔥 */
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -265,59 +266,74 @@ footer {
   }
 
   nav ul {
-    display: none; /* نخبي القائمة */
+    display: none;
   }
-
-  .menu-toggle {
-    display: block; /* نوري زر burger */
-    font-size: 1.8rem;
-    color: white;
-  }
+  .burger {
+    display: block;
+    cursor: pointer;
 }
+
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+}
+
   .welcome-slider {
-   width: 100%;
+    width: 100%;
     padding: 40px 10px;
     margin: 20px 0;
   }
+
   .welcome-slider h1 {
     padding: 10px 15px;
     font-size: 1.8rem;
+  }
 
-  }
   .welcome-message {
-  font-size: 1rem;
-  padding: 5px 10px;
-}
-  .home-main {
-    margin: 20px;
+    font-size: 1rem;
+    padding: 5px 10px;
   }
-   .content-bottom {
+
+  .content-bottom {
     flex-direction: column;
     margin: 0 20px 40px;
   }
+
   .chi-siamo-section,
   .icons-section {
     max-width: 100%;
     flex: 1 1 100%;
   }
+
   .icon-box {
     width: 100%;
     margin-bottom: 20px;
   }
-  
+
   .btn-servizi {
     width: 80%;
     max-width: 300px;
     font-size: 1rem;
     padding: 10px 20px;
-
   }
-
 }
+
 
 ::selection {
   background: #f18f01;
   color: #fff;
+}
+nav ul.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #1e3d59;
+  width: 200px;
+  padding: 20px;
 }
 
 

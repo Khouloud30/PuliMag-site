@@ -109,9 +109,13 @@ main {
 /* animation */
 @keyframes sliderAnimation {
   0% { background-image: url('background.jpg'); }
+  12.5% { background-image: url('controllo-di-gestione.png'); }
   25% { background-image: url('pulizia.jpg'); }
+  37.5% { background-image: url('imbiaaanc.jpg'); }
   50% { background-image: url('maag.jpg'); }
+  62.5% { background-image: url('logisticaa.jpg'); }
   75% { background-image: url('maaag.jpeg'); }
+  87.5% { background-image: url('ingegno.jpg'); }
   100% { background-image: url('maaagg.jpg'); }
 }
 

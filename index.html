@@ -76,13 +76,13 @@ Qualità, affidabilità e attenzione ai dettagli: il partner ideale per far cres
          </div>
       </section>
     </section>
-    <script>
+<script>
 const burger = document.getElementById("burger-menu");
-const nav = document.getElementById("nav-menu");
+const navMenu = document.querySelector("#nav-menu ul");
 
 burger.addEventListener("click", () => {
-  nav.classList.toggle("show");
-  burger.classList.toggle("show");
+  navMenu.classList.toggle("show");
+  burger.classList.toggle("active");
 });
 </script>
   </main>

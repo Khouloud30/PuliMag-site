@@ -118,10 +118,10 @@ main {
 /* CONTENT */
 .content-bottom {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 60px;
+  flex-direction: row;   /* 🔥 يرجعهم جنب بعضهم */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
   max-width: 1200px;
   margin: 0 auto 40px;
   padding-top: 20px;

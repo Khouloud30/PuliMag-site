@@ -7,104 +7,109 @@
   <title>Contatti - PuliMag Group</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body class="contact-page">
 
-  <header>
-    <div class="header-left">
-      <img src="logo.jpg" alt="Logo PuliMag Group" class="logo" />
-      <h1 class="company-name">PuliMag Group</h1>  
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="servizi.html">Servizi</a></li>
-        <li><a href="contact.html" class="active">Contatti</a></li>
-      </ul>
-    </nav>
-  </header>
-<section class="contact-hero">
-  <div class="overlay">
+<header>
+  <div class="header-left">
+    <img src="logo.jpg" alt="Logo PuliMag Group" class="logo" />
+    <h1 class="company-name">PuliMag Group</h1>  
   </div>
-   
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="servizi.html">Servizi</a></li>
+      <li><a href="contact.html" class="active">Contatti</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="contact-hero">
+  <div class="overlay"></div>
 </section>
 
 <div class="spacer"></div>
 
-
+<!-- TEXT -->
 <section class="contact-subtext">
   <p><strong>Richiedi informazioni</strong></p>
-  <p>Scopri tutti i servizi offerti dalla nostra azienda, specializzata in soluzioni complete e personalizzate per pulizia,  e logistica. Siamo impegnati a soddisfare ogni tua esigenza con professionalità ed eccellenza, garantendo risultati che superano le aspettative.</p>
-  <p>Il nostro team esperto ti supporta in ogni fase, assicurando un servizio rapido, efficiente e di alta qualità. Contattaci senza impegno per maggiori dettagli e scopri come possiamo aiutarti a semplificare e migliorare la gestione delle tue necessità di pulizia e logistica.</p>
+
+  <p>
+    Scopri tutti i servizi offerti dalla nostra azienda, specializzata in soluzioni complete e personalizzate per pulizia e logistica.
+  </p>
+
+  <p>
+    Il nostro team esperto ti supporta in ogni fase, assicurando un servizio rapido ed efficiente.
+  </p>
 </section>
 
-  <section class="info-section">
-
+<!-- INFO + MAP -->
+<section class="info-section">
   <div class="info-row">
 
-  <div class="map">
-  <iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.214563!2d11.26548!3d43.78125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a56b7c89d12345%3A0xabcdef1234567890!2sVia%20Arcangelo%20Corelli%20102%2C%2050127%20Firenze%20FI%2C%20Italia!5e0!3m2!1sit!2sit"
-  width="100%" 
-  height="100%" 
-  style="border:0;" 
-  allowfullscreen="" 
-  loading="lazy">
-</iframe>
+    <div class="map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.214563!2d11.26548!3d43.78125"
+        style="border:0;"
+        loading="lazy">
+      </iframe>
     </div>
 
-    <!-- INFO -->
     <div class="info-text">
       <h3>Informazioni Aziendali</h3>
 
       <p>Email: <a href="mailto:Pulimag100@gmail.com">Pulimag100@gmail.com</a></p>
-      <p>Pec: <a href="mailto:Pulimaggroup@pec-amministratore.it">Pulimaggroup@pec-amministratore.it</a></p>
+      <p>Pec: <a href="mailto:Pulimaggroup@pec-amministratore.it">PEC</a></p>
       <p>Telefono: <a href="tel:+393381776266">+39 3381776266</a></p>
-      <p>Ufficio commerciale:  <a href="tel:+393295871835">+39 3295871835</a></p> 
-      <p>Indirizzo: Firenze, Italia, Via arcangelo Corelli 102 </p>
+      <p>Ufficio commerciale: <a href="tel:+393295871835">+39 3295871835</a></p>
+      <p>Indirizzo: Firenze, Italia, Via Arcangelo Corelli 102</p>
     </div>
 
+  </div>
+</section>
+
+<!-- FORM -->
+<main class="contact-section">
+
+<section class="preventivo-section">
+
+  <h2>Richiedi un preventivo</h2>
+
+  <p class="intro-text">
+    Compila il form. Il resto lo facciamo noi.
+  </p>
+
+  <div class="contact-form">
+    <form id="contactForm">
+
+      <select class="form-select">
+        <option>Privato</option>
+        <option>Azienda</option>
+      </select>
+
+      <input type="text" id="name" placeholder="Nome / Azienda" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="piva" placeholder="P.IVA" />
+      <input type="text" id="region" placeholder="Regione" />
+
+      <textarea id="message" placeholder="Messaggio" rows="6" required></textarea>
+
+      <button type="submit">Invia richiesta</button>
+
+    </form>
   </div>
 
 </section>
 
-  <main class="contact-section">
-
-  <section class="preventivo-section">
-
-    <h2>Richiedi un preventivo</h2>
-
-    <p class="intro-text">
-      Stai progettando un impianto? Che sia solare o elettrico, siamo qui per guidarti.
-      Con Contact Italia, ogni richiesta diventa una soluzione precisa, pensata intorno alle tue esigenze.
-      Compila il form. Il resto lo facciamo noi.
-    </p>
-
-    <div class="contact-form">
-      <form id="contactForm">
-
-        <select>
-          <option>Privato</option>
-          <option>Azienda</option>
-        </select>
-
-        <input type="text" id="name" placeholder="Nome / Azienda" required />
-        <input type="email" id="email" placeholder="Email" required />
-        <input type="" id="Partita IVA " placeholder="P.IVA" required />
-        <input type="Regione" id="email" placeholder="Regione" required />
-        <textarea id="message" placeholder="Messaggio" rows="6" required></textarea>
-
-        <button type="submit">Invia richiesta</button>
-
-      </form>
-    </div>
-
-  </section>
-
 </main>
-  <footer>
-    <p>&copy; 2025 PuliMag Group. Tutti i diritti riservati.</p>
-  </footer>
 
+<footer>
+  <p>&copy; 2025 PuliMag Group. Tutti i diritti riservati.</p>
+</footer>
+
+<!-- JS -->
 <script>
 document.getElementById('contactForm').addEventListener('submit', function(event) {
   event.preventDefault();
@@ -112,33 +117,33 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
   const message = document.getElementById('message').value.trim();
+
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!name || !email || !message) {
-    alert("Per favore compila tutti i campi.");
+    alert("Compila tutti i campi.");
     return;
   }
 
   if (!emailPattern.test(email)) {
-    alert("Inserisci un indirizzo email valido.");
+    alert("Email non valida.");
     return;
   }
 
   const whatsappNumber = "393381776266";
+
   const textMessage = 
     `Ciao, mi chiamo ${name}.\n` +
-    `La mia email è: ${email}.\n` +
+    `Email: ${email}.\n` +
     `Messaggio: ${message}`;
 
   const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(textMessage)}`;
 
-  if (confirm("Sei sicuro di voler inviare il messaggio via WhatsApp?")) {
-    alert("Messaggio pronto! Si aprirà WhatsApp per l'invio.");
+  if (confirm("Inviare su WhatsApp?")) {
     window.open(url, '_blank');
   }
 });
 </script>
-
 
 </body>
 </html>

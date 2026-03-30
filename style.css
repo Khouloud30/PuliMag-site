@@ -249,9 +249,7 @@ footer {
   }
 }
 
-.perche-scegliere-section .perche-scegliere-box,
-.perche-scegliere-section .perche-scegliere-box h2,
-.perche-scegliere-section .perche-scegliere-box p {
+.perche-scegliere-section * {
   color: #1e3d59 !important;
 }
 

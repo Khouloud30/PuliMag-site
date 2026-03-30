@@ -151,7 +151,7 @@ main {
 }
 
 .perche-scegliere-box {
-  color: #1e3d59;
+  color: #1e3d59 !important;
   max-width: 450px;
 }
 
@@ -166,14 +166,14 @@ main {
 .icons-section {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 15px;
+  gap: 30px;
 }
 
 .icon-box {
   display: flex;
   align-items: center;
-  gap: 20px;
-  color: #1e3d59;
+  gap: 30px; /* أكثر وضوح */
+  padding: 8px 0;
 }
 
 /* FOOTER */

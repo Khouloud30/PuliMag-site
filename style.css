@@ -388,6 +388,10 @@ body{
 
 
 
+/* =======================
+   CONTACT PAGE GENERAL
+======================= */
+
 .contact-section {
   background-color: transparent;
   padding: 60px 20px;
@@ -400,14 +404,12 @@ body.contact-page {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* optional يعطي effect حلو */
+  background-attachment: fixed;
 }
 .contact-hero .overlay {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  /* إذا تحب شفافية خفيفة خلف النص تقدر تفك التعليق */
-  /* background: rgba(255, 255, 255, 0.1); */
-   display: flex;
+  inset: 0;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -419,23 +421,27 @@ body.contact-page {
   margin-bottom: 15px;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
-/* LAYOUT FLEX */
+/* =======================
+   LAYOUT
+======================= */
+
 .contact-row {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 30px;
+  justify-content: space-between;
 }
 
-/* FORM STYLE */
+/* =======================
+   FORM
+======================= */
+
 .contact-form {
   flex: 1;
-  background: white;
+  background: #fff;
   border-radius: 16px;
   padding: 30px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-  margin: 0;        /* 👈 مهم */
   text-align: left;
 }
 
@@ -453,22 +459,30 @@ body.contact-page {
   border-radius: 8px;
   border: 1px solid #ccc;
   box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
 }
 
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #f18f01;
+  outline: none;
+}
 
-/* INFOS AZIENDALI */
+/* =======================
+   COMPANY INFO
+======================= */
+
 .right-side {
   flex: 1;
   min-width: 300px;
-  padding: 0;
 }
 
 .company-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* 👈 هذا المهم */
-  text-align: left;
+  align-items: flex-start;
 }
+
 
 .company-info h3 {
   color: #f18f01;
@@ -476,26 +490,24 @@ body.contact-page {
   font-size: 1.5rem;
 }
 
-
+/* text + icon inline */
 .info-text p {
-  margin-bottom: 12px;
   display: flex;
-  flex-direction: column; /* يخلي السطر واضح */
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
 .company-info i {
-  font-size: 22px;   /* تكبير الإيكون */
+  font-size: 16px;
   color: #f18f01;
+  margin-right: 10px;
 }
 
 .company-info a {
   color: #1e3d59;
-  text-decoration: none;
   font-weight: 600;
-  margin-left: 0px; /* 👈 حرّكها لليسار */
-  font-size: 1.1rem;
-
-
+  text-decoration: none;
 }
 
 .company-info a:hover {
@@ -504,49 +516,30 @@ body.contact-page {
 }
   
 
-.left-side {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 60px; /* يدفع القسم لأسفل */
-  padding-left: 20px; /* مسافة من اليسار */
-}
-.info-row {
-  display: flex;
-  gap: 60px;
-  align-items: stretch;
-}
+/* =======================
+   MAP
+======================= */
 
 .map {
-  flex: 1;   /* 👈 خليه أكبر */
-  padding-left: 50px; /* 👈 يعطي espace داخل الماب */
-  padding-right: 10px;
-
-
-}
-
-.info-text {
   flex: 1;
-  line-height: 1.8;
-  padding: 0;              /* 👈 نحيو كل padding */
-  background: transparent; /* 👈 بدون خلفية */
-  box-shadow: none;
-  border-radius: 0;        /* 👈 ما يلزمش */
+  padding-left: 10px;
 }
 
 
 .map iframe {
-  margin-right: 10px; /* 👈 يبعد الماب */
   width: 100%;
-  height: 250px;
-  min-height: 400px;
+  height: 400px;
   border-radius: 12px;
 }
+
+/* =======================
+   PREVENTIVO
+======================= */
 
 .preventivo-section {
   text-align: center;
   padding: 60px 20px;
+  margin-bottom: 40px;
 }
 
 .preventivo-section h2 {
@@ -559,6 +552,32 @@ body.contact-page {
   margin: 0 auto 30px auto;
   line-height: 1.6;
   color: #1e3d59;
+}
+/* =======================
+   SUBTEXT
+======================= */
+
+.contact-subtext {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  color: #1e3d59;
+  line-height: 1.8;
+}
+
+/* =======================
+   LOGO
+======================= */
+
+.logo-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-small {
+  width: 80px;
+  margin-bottom: 10px;
 }
 /* === استجابة الشاشة الصغيرة === */
 @media (max-width: 900px) {
@@ -595,7 +614,7 @@ body.contact-page {
 }
 .map i frame {
   width: 100%;
-  height: 00%;   /* كبّرها */
+  height: 400px;   /* كبّرها */
   min-height: 400px;
   border-radius: 12px;
 }

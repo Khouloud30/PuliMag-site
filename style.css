@@ -201,7 +201,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;   /* مهم باش الكل يكون في نفس line */
-  gap: 40px;             /* spacing بين icon و text */
+  gap: 30px;             /* spacing بين icon و text */
   padding: 10px 0;
   transition: transform 0.3s ease;
 }
@@ -214,7 +214,7 @@ main {
 
 /* icon size */
 .icon-box i {
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   color: #1e3d59;
   min-width: 40px;
 

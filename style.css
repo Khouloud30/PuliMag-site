@@ -125,55 +125,76 @@ main {
   margin: 0 auto 40px;
   padding-top: 20px;
 }
+/* =======================
+   CHI SIAMO + PERCHÉ
+======================= */
 
-/* CHI SIAMO */
 .chi-siamo-section {
   flex: 1;
   text-align: left;
 }
 
-.chi-siamo-box {
-  color: #1e3d59;
-  max-width: 450px;
-}
-
-.chi-siamo-box h2 {
-  color: #1e3d59;
-  font-weight: 700;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-/* PERCHÉ SCEGLIERE */
 .perche-scegliere-section {
   flex: 1;
   text-align: right;
 }
 
+/* box common style */
+.chi-siamo-box,
 .perche-scegliere-box {
   color: #1e3d59 !important;
   max-width: 450px;
 }
 
+/* titles */
+.chi-siamo-box h2,
 .perche-scegliere-box h2 {
-  color: #1e3d59;
+  color: #1e3d59 !important;
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
-/* ICONS */
+/* paragraphs unified style */
+.chi-siamo-box p,
+.perche-scegliere-box p,
+.icon-box p {
+  color: #1e3d59;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* make sections aligned clean */
+.chi-siamo-section,
+.perche-scegliere-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* =======================
+   ICONS FIX (important 🔥)
+======================= */
+
 .icons-section {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 35px; /* زدت المسافة */
 }
 
 .icon-box {
   display: flex;
-  align-items: center;
-  gap: 30px; /* أكثر وضوح */
-  padding: 8px 0;
+  align-items: center;   /* مهم باش الكل يكون في نفس line */
+  gap: 35px;             /* spacing بين icon و text */
+  padding: 10px 0;
+}
+
+/* icon size */
+.icon-box i {
+  font-size: 2.5rem;
+  color: #1e3d59;
 }
 
 /* FOOTER */

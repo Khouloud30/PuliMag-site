@@ -160,6 +160,20 @@ main {
   margin-bottom: 20px;
 }
 
+.chi-siamo-box i {
+  color: #1e3d59;
+  font-size: 0.95rem;
+  margin-right: 12px;   /* 🔥 espace أكبر */
+  flex-shrink: 0;
+}
+
+.chi-siamo-box i {
+  color: #1e3d59;
+  font-size: 0.95rem;
+  margin-right: 12px;   /* 🔥 espace أكبر */
+  flex-shrink: 0;
+}
+
 /* paragraphs unified style */
 .chi-siamo-box p,
 .perche-scegliere-box p,

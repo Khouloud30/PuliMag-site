@@ -3,44 +3,48 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
 
-
-/* الهيدر */
+/* ================= HEADER ================= */
 header {
   background-color: #1e3d59 !important;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px; 
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1000;
+  padding: 10px 30px;
   height: 70px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
 .header-left {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .logo {
-  height: 40px;
   width: 40px;
+  height: 40px;
 }
 
 .company-name {
-  color: white !important;
+  color: white;
   font-weight: bold;
   font-size: 20px;
 }
-/* NAV */
+
+/* ================= NAV ================= */
 nav ul {
   list-style: none;
   display: flex;
   gap: 40px;
 }
+
 nav ul li a {
   color: white;
   text-decoration: none;
@@ -48,21 +52,15 @@ nav ul li a {
   font-size: 1.1rem;
   padding: 8px 15px;
   border-radius: 6px;
-  transition: background-color 0.3s ease;
+  transition: 0.3s;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
   background-color: #f18f01;
-  color: white;
-  transition: all 0.3s ease;
-}
-main {
-  flex: 1; /* هذا أهم حاجة باش footer يهبط لتحت */
 }
 
-
-/* قسم Benvenuti مع صور متحركة (background slider) */
+/* ================= HERO ================= */
 .welcome-slider {
   position: relative;
   height: 400px;
@@ -70,89 +68,66 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
   text-align: center;
+  color: white;
   overflow: hidden;
-  margin: 0 ;
   padding: 60px 20px;
-  user-select: none;
-  gap: 10px;
-  background-color: #000; /* fallback */
 }
+
 .welcome-slider::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  inset: 0;
   background-size: cover;
   background-position: center;
   animation: sliderAnimation 16s infinite;
-  z-index: 0;
   filter: brightness(0.6);
-  opacity: 1; /* خلي الشفافية كاملة */
-  background-repeat: no-repeat;
 }
 
-.welcome-slider h1 {
-  position: relative;
-  z-index: 1;
-  background-color: transparent;
-  padding: 10px 20px;
-  border-radius: 12px;
-  color: white;
-  box-shadow: none;
-  display: inline-block;
-  margin-bottom: 5px; /* خلي المسافة صغيرة تحت العنوان */
-  font-size: 3rem;
-  font-weight: 700;
-}
+.welcome-slider h1,
 .welcome-message {
   position: relative;
   z-index: 1;
-  color: white;
-  font-size: 1.4rem;
-  margin: 0 0 15px 0; /* بدون فراغ فوق، مع فراغ صغير تحت */
-  background-color: transparent;
-  padding: 5px 30px;
-  border-radius: 10px;
-  display: inline-block;
-  user-select: none;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-  font-weight: 400;
-  line-height: 1.6;
 }
 
-.burger {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 3000;
+/* ================= CONTENT ================= */
+.content-bottom {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  flex-wrap: wrap;
+  padding-top: 20px;
 }
-.burger.active div:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+
+/* ================= CHI SIAMO ================= */
+.chi-siamo-section {
+  flex: 0 0 400px;
 }
-.burger.active div:nth-child(2) {
-  opacity: 0;
+
+/* ================= ICONS ================= */
+.icons-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
 }
-.burger.active div:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-.why-title {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 0px;
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   color: #1e3d59;
-  position: relative;
 }
 
-.why-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  margin: 10px auto 0;
+/* ================= FOOTER ================= */
+footer {
+  background-color: #1e3d59;
+  text-align: center;
+  padding: 20px 0;
+  color: white;
 }
-/* animation keyframes لتغيير الصور الخلفية */
+
+/* ================= ANIMATION ================= */
 @keyframes sliderAnimation {
   0% { background-image: url('background.jpg'); }
   25% { background-image: url('pulizia.jpg'); }
@@ -161,204 +136,61 @@ main {
   100% { background-image: url('maaagg.jpg'); }
 }
 
-/* فصل قسم Chi siamo والأيقونات تحت Benvenuti */
-.content-bottom {
-  display: flex;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto 40px;
-  flex-wrap: wrap;
-  justify-content: space-between; /* بدل flex-start */
-  align-items: flex-start; /* باش يكونو في نفس السطر */
-  padding-top: 20px;
-
-}
-
-/* قسم Chi siamo على اليسار */
-.chi-siamo-section {
-  flex: 0 0 400px;
-  max-width: 400px;
-}
-
-.chi-siamo-box {
-  background: none;    /* نشيل الخلفية البيضاء */
-  box-shadow: none;    /* نشيل الإطار والظل */
-  padding: 0;          /* نشيل الحشوة */
-  color: #1e3d59;      /* لون النص أزرق غامق */
-}
-
-.chi-siamo-box h2 {
-  margin-bottom: 20px; /* زيدها باش تكبر المسافة */
-  background: none;
-  border: none;
-  color: #1e3d59;      /* نص العنوان أزرق غامق */
-  font-weight: bold;
-  font-size: 2rem;
-}
-
-.icons-section {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-}
-.icon-box {
-  background: none;
-  width: 100%;
-  padding: 5px 0; /* خفف البادينغ */
-  box-shadow: none;
-  text-align: left;
-  font-size: 1.1rem; /* أكبر شوي للوضوح */
-  cursor: default;
-  color: #1e3d59;
-  display: flex;
-  align-items: center;
-  gap: 20px; /* زيادة المسافة بين الأيقونة والنص */
-  transition: none;
-}
-
-.icon-box i {
-  font-size: clamp(2rem, 5vw, 3rem);
-  color: #1e3d59;
-  margin-bottom: 0;
-}
-
-
-.icon-box p {
-  font-weight: 300; /* خط رقيق */
-  margin: 0;
-  color: #1e3d59;
-}
-
-.icon-box:hover {
-  transform: none; /* نشيل التحريك */
-  box-shadow: none;
-}
-
-/* الفوتر */
-footer {
-  background-color:#1e3d59;
-  text-align: center;
-  padding: 20px 0;
-  color: white;
-  font-weight: 600;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-  margin-top: auto;
-  border-top: 1px solid rgba(255,255,255,0.2);
-
-}
-main {
-  flex: 1;
-}
-
-/* Responsive */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-   .company-name {
-    font-size: 16px;
-  }
 
-  .logo {
-    width: 30px;
-    height: 30px;
-  }
-  header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .header-left {
-    margin-bottom: 0;
-  }
-nav ul {
-  position: fixed;
-  top: 60px;
-  right: 15px;
-  width: 200px;  /* صغيرة */
-  background: #ffffff; /* أبيض */
-  border-radius: 10px;
-  padding: 15px;
+  .logo { width: 30px; height: 30px; }
+  .company-name { font-size: 16px; }
 
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  transform: translateX(120%);
-  transition: transform 0.3s ease;
-
-}
+  nav ul {
+    position: fixed;
+    top: 60px;
+    right: 15px;
+    width: 200px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+    transform: translateX(120%);
+    transition: 0.3s;
+  }
 
   nav ul.show {
     transform: translateX(0);
   }
-  nav ul li {
-    margin-bottom: 10px;
-  }
+
   nav ul li a {
     color: #1e3d59;
-    display: block;
-    padding: 6px 10px;
     font-size: 0.9rem;
   }
+
   .burger {
     display: block;
     cursor: pointer;
-}
+  }
 
   .burger div {
     width: 25px;
     height: 3px;
     background: white;
     margin: 2px;
-}
-
-  .welcome-slider {
-    width: 100%;
-    padding: 40px 10px;
-    margin:  0;
-  }
-
-  .welcome-slider h1 {
-    padding: 10px 15px;
-    font-size: 2rem;
-  }
-
-  .welcome-message {
-    max-width: 300px;
-    font-size: 1rem;
-    padding: 5px 10px;
   }
 
   .content-bottom {
     flex-direction: column;
-    margin: 0 20px 40px;
-  }
-
-  .chi-siamo-section,
-  .icons-section {
-    max-width: 100%;
-    flex: 1 1 100%;
-    align-items: center;
-    grid-template-columns: 1fr;
-
   }
 
   .icon-box {
-    width: 100%;
-    margin-bottom: 20px;
     justify-content: center;
     text-align: center;
   }
-
-  .btn-servizi {
-    width: 80%;
-    max-width: 300px;
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
 }
+
+/* ================= SELECTION ================= */
 ::selection {
   background: #f18f01;
-  color: #fff;
+  color: white;
 }
 
 

@@ -197,12 +197,9 @@ main {
 }
 
 .icons-section {
-  flex: 0 0 350px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 15px;
-  margin-top: 0;
-  align-items: flex-start;
 }
 .icon-box {
   background: none;
@@ -254,7 +251,7 @@ main {
 }
 
 /* Responsive */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
    .company-name {
     font-size: 16px;
   }
@@ -288,8 +285,6 @@ nav ul {
   transform: translateX(120%);
   transition: transform 0.3s ease;
 
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  z-index: 2500;
 }
 
   nav ul.show {
@@ -299,7 +294,7 @@ nav ul {
     margin-bottom: 10px;
   }
   nav ul li a {
-    color: white;
+    color: #1e3d59;
     display: block;
     padding: 6px 10px;
     font-size: 0.9rem;
@@ -343,6 +338,7 @@ nav ul {
     max-width: 100%;
     flex: 1 1 100%;
     align-items: center;
+    grid-template-columns: 1fr;
 
   }
 
@@ -364,6 +360,9 @@ nav ul {
   background: #f18f01;
   color: #fff;
 }
+
+
+
 
 body{
   background: #ffffff;
